@@ -15,7 +15,6 @@ import Dialog from 'src/components/Dialog'
 import SelectRecipientButton from 'src/components/SelectRecipientButton'
 import MagicWand from 'src/icons/MagicWand'
 import QRCode from 'src/icons/QRCode'
-import Social from 'src/icons/Social'
 import { navigate } from 'src/navigator/NavigationService'
 import { Screens } from 'src/navigator/Screens'
 import { useSelector } from 'src/redux/hooks'
@@ -35,7 +34,7 @@ export default function SelectRecipientButtons({ onContactsPermissionGranted }: 
   const phoneNumberVerified = useSelector(phoneNumberVerifiedSelector)
   const jumpstartSendEnabled = getFeatureGate(StatsigFeatureGates.SHOW_JUMPSTART_SEND)
 
-  const [contactsPermissionStatus, setContactsPermissionStatus] = useState<
+  const [_contactsPermissionStatus, setContactsPermissionStatus] = useState<
     PermissionStatus | undefined
   >(undefined)
   const [showConnectPhoneNumberModal, setShowConnectPhoneNumberModal] = useState(false)
@@ -48,6 +47,9 @@ export default function SelectRecipientButtons({ onContactsPermissionGranted }: 
     },
   })
 
+  // @ts-ignore TODO(mobilestack): This will be used if CPV is ever supported. Since
+  // it's a sizable chunk of code, and would introduce cascading changes + a large diff
+  // if removed, keeping this in for the time being.
   const onPressContacts = async () => {
     // always fetch permission here as it can change outside the app through
     // native settings, but this screen still remains in view (happens for
@@ -161,8 +163,7 @@ export default function SelectRecipientButtons({ onContactsPermissionGranted }: 
           title={t('sendSelectRecipient.jumpstart.title')}
           subtitle={t('sendSelectRecipient.jumpstart.subtitle')}
           onPress={onPressJumpstart}
-          icon={<MagicWand />}
-          iconBackgroundColor={Colors.successLight}
+          icon={<MagicWand color={Colors.black} />}
         />
       )}
       <SelectRecipientButton
@@ -171,16 +172,6 @@ export default function SelectRecipientButtons({ onContactsPermissionGranted }: 
         subtitle={t('sendSelectRecipient.qr.subtitle')}
         onPress={onPressQR}
         icon={<QRCode />}
-      />
-      <SelectRecipientButton
-        testID={'SelectRecipient/Contacts'}
-        title={t('sendSelectRecipient.invite.title')}
-        subtitle={t('sendSelectRecipient.invite.subtitle')}
-        onPress={onPressContacts}
-        icon={<Social />}
-        showCheckmark={
-          phoneNumberVerified && contactsPermissionStatus === PERMISSION_RESULTS.GRANTED
-        }
       />
       <Dialog
         title={t('sendSelectRecipient.connectPhoneNumberModal.title')}
