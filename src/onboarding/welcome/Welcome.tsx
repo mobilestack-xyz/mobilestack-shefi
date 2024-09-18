@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import { acceptTerms, chooseCreateAccount, chooseRestoreAccount } from 'src/account/actions'
 import { recoveringFromStoreWipeSelector } from 'src/account/selectors'
@@ -8,7 +8,7 @@ import AppAnalytics from 'src/analytics/AppAnalytics'
 import { OnboardingEvents } from 'src/analytics/Events'
 import Button, { BtnSizes, BtnTypes } from 'src/components/Button'
 import CheckBox from 'src/icons/CheckBox'
-import { welcomeBackground } from 'src/images/Images'
+import MSLogoFull from 'src/images/MSLogoFull'
 import WelcomeLogo from 'src/images/WelcomeLogo'
 import { nuxNavigationOptions } from 'src/navigator/Headers'
 import { navigate } from 'src/navigator/NavigationService'
@@ -87,12 +87,13 @@ export default function Welcome() {
   }
 
   return (
-    <SafeAreaView style={styles.container}>
-      <ImageBackground source={welcomeBackground} resizeMode="stretch" style={styles.image}>
+    <View style={styles.background}>
+      <SafeAreaView style={styles.container}>
+        {/* <ImageBackground source={welcomeBackground} resizeMode="stretch" style={styles.image}> */}
         <View style={styles.contentContainer}>
           <WelcomeLogo />
         </View>
-        <View style={{ ...styles.buttonView, marginBottom: Math.max(0, 40 - insets.bottom) }}>
+        <View style={{ ...styles.buttonView }}>
           {showTermsCheckbox && (
             <View style={styles.termsContainer}>
               <TouchableOpacity onPress={() => toggleTermsCheckBox((prev) => !prev)}>
@@ -128,9 +129,14 @@ export default function Welcome() {
             testID={'RestoreAccountButton'}
             disabled={buttonsDisabled}
           />
+
+          <View style={styles.msLogoContainer}>
+            <MSLogoFull />
+          </View>
         </View>
-      </ImageBackground>
-    </SafeAreaView>
+        {/* </ImageBackground> */}
+      </SafeAreaView>
+    </View>
   )
 }
 
@@ -140,6 +146,10 @@ Welcome.navigationOptions = {
 }
 
 const styles = StyleSheet.create({
+  background: {
+    backgroundColor: colors.secondary,
+    flex: 1,
+  },
   contentContainer: {
     flexGrow: 1,
     justifyContent: 'center',
@@ -173,5 +183,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     marginTop: Spacing.XLarge48,
+  },
+  msLogoContainer: {
+    width: '100%',
+    marginTop: Spacing.Large32,
+    marginBottom: Spacing.Regular16,
+    alignItems: 'center',
   },
 })

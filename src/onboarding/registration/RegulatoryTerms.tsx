@@ -10,7 +10,6 @@ import { OnboardingEvents } from 'src/analytics/Events'
 import Button, { BtnSizes, BtnTypes } from 'src/components/Button'
 import DevSkipButton from 'src/components/DevSkipButton'
 import { withTranslation } from 'src/i18n'
-import Logo from 'src/images/Logo'
 import { nuxNavigationOptions } from 'src/navigator/Headers'
 import { navigate } from 'src/navigator/NavigationService'
 import { Screens } from 'src/navigator/Screens'
@@ -86,7 +85,6 @@ export class RegulatoryTerms extends React.Component<Props> {
         contentContainerStyle={styles.scrollContent}
         testID="scrollView"
       >
-        <Logo color={Colors.black} size={32} />
         <Text style={styles.title}>{t('terms.title')}</Text>
         <Text style={styles.disclaimer}>
           <Trans i18nKey={'terms.info'}>

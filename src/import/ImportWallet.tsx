@@ -22,12 +22,14 @@ import Dialog from 'src/components/Dialog'
 import KeyboardAwareScrollView from 'src/components/KeyboardAwareScrollView'
 import KeyboardSpacer from 'src/components/KeyboardSpacer'
 import RecoveryPhraseInput, { RecoveryPhraseInputStatus } from 'src/components/RecoveryPhraseInput'
+import { ONBOARDING_FEATURES_ENABLED } from 'src/config'
 import { importBackupPhrase } from 'src/import/actions'
 import { nuxNavigationOptions } from 'src/navigator/Headers'
 import { navigate, navigateClearingStack } from 'src/navigator/NavigationService'
 import { Screens } from 'src/navigator/Screens'
 import { StackParamList } from 'src/navigator/types'
 import TopBarTextButtonOnboarding from 'src/onboarding/TopBarTextButtonOnboarding'
+import { ToggleableOnboardingFeatures } from 'src/onboarding/types'
 import { useDispatch, useSelector } from 'src/redux/hooks'
 import { isAppConnected } from 'src/redux/selectors'
 import { typeScale } from 'src/styles/fonts'
@@ -37,8 +39,6 @@ import Logger from 'src/utils/Logger'
 import { normalizeMnemonic } from 'src/utils/account'
 import { Currency } from 'src/utils/currencies'
 import useBackHandler from 'src/utils/useBackHandler'
-import { ONBOARDING_FEATURES_ENABLED } from 'src/config'
-import { ToggleableOnboardingFeatures } from 'src/onboarding/types'
 
 type Props = NativeStackScreenProps<StackParamList, Screens.ImportWallet>
 
@@ -258,13 +258,11 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   scrollContainer: {
-    paddingVertical: Spacing.Regular16,
-    paddingHorizontal: Spacing.Thick24,
+    padding: Spacing.Regular16,
   },
   title: {
-    textAlign: 'center',
     paddingBottom: Spacing.Thick24,
-    ...typeScale.labelSemiBoldLarge,
+    ...typeScale.titleMedium,
   },
   description: {
     paddingTop: Spacing.Thick24,
