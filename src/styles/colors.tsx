@@ -1,8 +1,10 @@
 // Designer Created Figma Colors
 export enum Colors {
   error = '#EA6042',
-  primary = '#1AB775',
+  primary = '#F0CFF5',
   primaryDisabled = `${primary}80`, // 50% opacity
+  secondary = '#AAC6ED',
+  border = '#AAC6ED',
   white = '#FFFFFF',
   ivory = '#F9F6F0',
   black = '#2E3338',
@@ -10,7 +12,7 @@ export enum Colors {
   gray4 = '#666666',
   gray3 = '#757575',
   gray2 = '#E6E6E6',
-  gray1 = '#F8F9F9',
+  gray1 = '#F7F8EE',
   successDark = '#137211',
   successLight = '#F1FDF1',
   infoDark = '#0768AE',

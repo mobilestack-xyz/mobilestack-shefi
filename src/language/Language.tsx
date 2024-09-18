@@ -4,8 +4,8 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { FlatList, ListRenderItemInfo, ScrollView, StyleSheet, Text } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { SettingsEvents } from 'src/analytics/Events'
 import AppAnalytics from 'src/analytics/AppAnalytics'
+import { SettingsEvents } from 'src/analytics/Events'
 import SelectionOption from 'src/components/SelectionOption'
 import useChangeLanguage from 'src/i18n/useChangeLanguage'
 import { emptyHeader, headerWithBackButton } from 'src/navigator/Headers'
@@ -89,10 +89,10 @@ LanguageScreen.navigationOptions =
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 16,
   },
   title: {
     ...typeScale.titleMedium,
-    margin: 16,
   },
 })
 
