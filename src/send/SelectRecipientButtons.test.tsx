@@ -54,12 +54,14 @@ describe('SelectRecipientButtons', () => {
     expect(await findByTestId('SelectRecipient/QR')).toBeTruthy()
   })
   // TODO(mobilestack): Un-skip these tests if CPV is ever enabled
+  // eslint-disable-next-line jest/no-disabled-tests
   it.skip('renders QR and contacts button with no check mark on contacts if phone number is verified but contact permission is not granted', async () => {
     const { getByTestId, queryByTestId, findByTestId } = renderComponent(true)
     expect(await findByTestId('SelectRecipient/QR')).toBeTruthy()
     expect(getByTestId('SelectRecipient/Contacts')).toBeTruthy()
     expect(queryByTestId('SelectRecipient/Contacts/checkmark')).toBeFalsy()
   })
+  // eslint-disable-next-line jest/no-disabled-tests
   it.skip('renders QR and contacts button with check mark on contacts if phone number is verified and contact permission is granted', async () => {
     jest.mocked(check).mockResolvedValue(RESULTS.GRANTED)
 
@@ -76,6 +78,7 @@ describe('SelectRecipientButtons', () => {
       screen: Screens.QRScanner,
     })
   })
+  // eslint-disable-next-line jest/no-disabled-tests
   it.skip('invokes permissions granted callback when contacts button is pressed with phone verified and contacts permission granted', async () => {
     jest.mocked(check).mockResolvedValue(RESULTS.GRANTED)
     const { findByTestId, onPermissionsGranted } = renderComponent(true)
@@ -90,7 +93,7 @@ describe('SelectRecipientButtons', () => {
     expect(check).toHaveBeenCalledTimes(2) // one on load and one when pressing the button
     expect(request).not.toHaveBeenCalled()
   })
-
+  // eslint-disable-next-line jest/no-disabled-tests
   it.skip('shows connect phone number modal if phone is not verified', async () => {
     const { findByTestId, getByTestId, onPermissionsGranted } = renderComponent(false)
     await act(async () => {
@@ -125,7 +128,7 @@ describe('SelectRecipientButtons', () => {
       expect(navigate).toHaveBeenCalledWith(Screens.VerificationStartScreen, { hasOnboarded: true })
     })
   })
-
+  // eslint-disable-next-line jest/no-disabled-tests
   it.skip('shows enable contacts modal if phone verified but contacts permission is blocked', async () => {
     jest.mocked(check).mockResolvedValue(RESULTS.BLOCKED)
     const { findByTestId, getByTestId, onPermissionsGranted } = renderComponent(true)
@@ -155,7 +158,7 @@ describe('SelectRecipientButtons', () => {
     })
     expect(navigateToPhoneSettings).toHaveBeenCalled()
   })
-
+  // eslint-disable-next-line jest/no-disabled-tests
   it.skip('requests permission if phone is verified but contacts permission is denied and invokes callback if request is granted', async () => {
     jest.mocked(request).mockResolvedValue(RESULTS.GRANTED)
     const { findByTestId, onPermissionsGranted } = renderComponent(true)
@@ -174,7 +177,7 @@ describe('SelectRecipientButtons', () => {
       { permissionStatus: RESULTS.GRANTED }
     )
   })
-
+  // eslint-disable-next-line jest/no-disabled-tests
   it.skip('requests permission if phone is verified but contacts permission is denied and does nothing if request is denied', async () => {
     jest.mocked(request).mockResolvedValue(RESULTS.DENIED)
     const { findByTestId, getByTestId, onPermissionsGranted } = renderComponent(true)
@@ -194,7 +197,7 @@ describe('SelectRecipientButtons', () => {
     )
     expect(getByTestId('SelectRecipient/ContactsModal')).not.toBeVisible()
   })
-
+  // eslint-disable-next-line jest/no-disabled-tests
   it.skip.each([
     { os: 'ios' as const, showsModal: false, testName: 'does nothing' },
     { os: 'android' as const, showsModal: true, testName: 'shows modal' },
