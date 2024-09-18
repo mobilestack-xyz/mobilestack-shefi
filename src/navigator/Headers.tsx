@@ -10,9 +10,8 @@ import LegacyTokenDisplay from 'src/components/LegacyTokenDisplay'
 import SettingsGearButton from 'src/components/SettingsGearButton'
 import TokenDisplay from 'src/components/TokenDisplay'
 import i18n from 'src/i18n'
-import Logo from 'src/images/Logo'
 import DisconnectBanner from 'src/shared/DisconnectBanner'
-import colors, { Colors } from 'src/styles/colors'
+import colors from 'src/styles/colors'
 import { typeScale } from 'src/styles/fonts'
 import { Spacing } from 'src/styles/styles'
 import { useTokenInfoByCurrency } from 'src/tokens/hooks'
@@ -223,16 +222,9 @@ export function HeaderTitleWithSubtitle({
 
 export const tabHeader: NativeStackNavigationOptions = {
   ...emptyHeader,
-  headerRight: () => {
-    return (
-      <View style={[styles.topElementsContainer, { marginRight: Spacing.Tiny4 }]}>
-        <SettingsGearButton testID="WalletHome/SettingsGearButton" />
-      </View>
-    )
-  },
   headerLeft: () => (
-    <View style={[styles.topElementsContainer, { marginLeft: Spacing.Regular16 }]}>
-      <Logo color={Colors.black} size={22} />
+    <View style={[styles.topElementsContainer, { marginLeft: Spacing.Tiny4 }]}>
+      <SettingsGearButton testID="WalletHome/SettingsGearButton" />
     </View>
   ),
 }

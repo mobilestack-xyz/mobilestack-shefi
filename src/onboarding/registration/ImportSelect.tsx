@@ -5,8 +5,8 @@ import { useTranslation } from 'react-i18next'
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { cancelCreateOrRestoreAccount } from 'src/account/actions'
-import { OnboardingEvents } from 'src/analytics/Events'
 import AppAnalytics from 'src/analytics/AppAnalytics'
+import { OnboardingEvents } from 'src/analytics/Events'
 import Card from 'src/components/Card'
 import Touchable from 'src/components/Touchable'
 import CloudCheck from 'src/icons/CloudCheck'
@@ -20,7 +20,7 @@ import TopBarTextButtonOnboarding from 'src/onboarding/TopBarTextButtonOnboardin
 import { useDispatch } from 'src/redux/hooks'
 import colors from 'src/styles/colors'
 import { typeScale } from 'src/styles/fonts'
-import { Shadow, Spacing } from 'src/styles/styles'
+import { Spacing } from 'src/styles/styles'
 
 type Props = NativeStackScreenProps<StackParamList, Screens.ImportSelect>
 
@@ -38,14 +38,14 @@ function ActionCard({
   testID?: string
 }) {
   return (
-    <Card style={styles.card} rounded={true} shadow={Shadow.SoftLight} testID={testID}>
+    <Card style={styles.card} shadow={null} rounded={true} testID={testID}>
       <Touchable borderRadius={8} style={styles.touchable} onPress={onPress}>
         <>
-          <View style={styles.topLine}>
-            {icon}
+          {icon}
+          <View style={styles.textContainer}>
             <Text style={styles.cardTitle}>{title}</Text>
+            <Text style={styles.cardDescription}>{description}</Text>
           </View>
-          <Text style={styles.cardDescription}>{description}</Text>
         </>
       </Touchable>
     </Card>
@@ -89,7 +89,7 @@ export default function ImportSelect({ navigation }: Props) {
           <ActionCard
             title={t('importSelect.emailAndPhone.title')}
             description={t('importSelect.emailAndPhone.description')}
-            icon={<CloudCheck color={colors.successDark} />}
+            icon={<CloudCheck color={colors.black} width={32} height={32} />}
             onPress={() =>
               navigate(Screens.SignInWithEmail, {
                 keylessBackupFlow: KeylessBackupFlow.Restore,
@@ -101,7 +101,7 @@ export default function ImportSelect({ navigation }: Props) {
           <ActionCard
             title={t('importSelect.recoveryPhrase.title')}
             description={t('importSelect.recoveryPhrase.description')}
-            icon={<Lock color={colors.successDark} />}
+            icon={<Lock color={colors.black} width={32} height={32} />}
             onPress={() => navigate(Screens.ImportWallet, { clean: true })}
             testID="ImportSelect/Mnemonic"
           />
@@ -122,18 +122,18 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     flex: 1,
     padding: 0,
+    borderWidth: 1,
+    borderColor: colors.border,
   },
   cardDescription: {
     ...typeScale.bodySmall,
-    marginLeft: 28,
   },
   cardTitle: {
-    ...typeScale.labelMedium,
-    color: colors.successDark,
+    ...typeScale.labelSemiBoldMedium,
+    color: colors.black,
     flex: 1,
   },
   safeArea: {
-    backgroundColor: colors.gray1,
     flex: 1,
   },
   screenDescription: {
@@ -154,7 +154,12 @@ const styles = StyleSheet.create({
     gap: Spacing.Smallest8,
   },
   touchable: {
+    flexDirection: 'row',
+    gap: Spacing.Smallest8,
     padding: Spacing.Regular16,
+  },
+  textContainer: {
+    flex: 1,
   },
   viewContainer: {
     alignItems: 'center',

@@ -46,10 +46,9 @@ const styles = StyleSheet.create({
   contentContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: 16,
-    paddingVertical: 14,
+    paddingVertical: 16,
     borderBottomWidth: 1,
-    borderColor: colors.gray2,
+    borderColor: colors.border,
   },
   text: {
     ...typeScale.bodyMedium,
