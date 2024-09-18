@@ -35,7 +35,7 @@ const configOrThrow = (key: string) => {
   throw new RangeError(`Missing Config value for ${key}`)
 }
 
-export const APP_NAME = 'Valora'
+export const APP_NAME = 'SheFi'
 
 // DEV only related settings
 export const isE2EEnv = stringToBoolean(Config.IS_E2E || 'false')
@@ -132,7 +132,7 @@ export const BIDALI_URL = keyOrUndefined(secretsFile, DEFAULT_TESTNET, 'BIDALI_U
 export const WALLET_CONNECT_PROJECT_ID =
   keyOrUndefined(secretsFile, DEFAULT_TESTNET, 'WALLET_CONNECT_PROJECT_ID') ??
   // mobilestack-e2e-client project in the WC project dashboard
-  '36d4ec3335559558180cc1079152fcb3'
+  'TODO'
 export const AUTH0_CLIENT_ID =
   keyOrUndefined(secretsFile, DEFAULT_TESTNET, 'AUTH0_CLIENT_ID') ??
   // dev app client id as fallback for e2e tests
@@ -163,7 +163,7 @@ export const SIMPLEX_FEES_URL =
   'https://support.simplex.com/hc/en-gb/articles/360014078420-What-fees-am-I-paying-'
 
 export const APP_STORE_ID = Config.APP_STORE_ID
-export const DYNAMIC_LINK_DOMAIN_URI_PREFIX = 'https://vlra.app'
+export const DYNAMIC_LINK_DOMAIN_URI_PREFIX = 'https://shefi.app'
 export const CROWDIN_DISTRIBUTION_HASH = 'e-f9f6869461793b9d1a353b2v7c'
 export const OTA_TRANSLATIONS_FILEPATH = `file://${CachesDirectoryPath}/translations`
 
@@ -223,6 +223,6 @@ export const ENABLED_QUICK_ACTIONS = (
     (value) => !!value && Object.values(HomeActionName).includes(value as HomeActionName)
   ) as HomeActionName[]
 
-export const FETCH_FIATCONNECT_QUOTES = true
+export const FETCH_FIATCONNECT_QUOTES = false
 
-export const WALLETCONNECT_UNIVERSAL_LINK = 'https://valoraapp.com/wc'
+export const WALLETCONNECT_UNIVERSAL_LINK = 'https://shefi.org/wc'
