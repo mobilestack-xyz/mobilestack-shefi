@@ -2,8 +2,8 @@ import BigNumber from 'bignumber.js'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { StyleSheet, Text, View } from 'react-native'
-import { FiatExchangeEvents } from 'src/analytics/Events'
 import AppAnalytics from 'src/analytics/AppAnalytics'
+import { FiatExchangeEvents } from 'src/analytics/Events'
 import TokenIcon, { IconSize } from 'src/components/TokenIcon'
 import Touchable from 'src/components/Touchable'
 import { poolInfoSelector } from 'src/earn/selectors'
@@ -43,8 +43,8 @@ function EarnItem() {
     return (
       <Item
         icon={
-          <CircledIcon radius={32} backgroundColor={colors.successLight}>
-            <EarnCoins color={colors.successDark} />
+          <CircledIcon radius={32} backgroundColor={colors.primaryDisabled}>
+            <EarnCoins color={colors.black} />
           </CircledIcon>
         }
         title={t('earnFlow.entrypoint.title')}

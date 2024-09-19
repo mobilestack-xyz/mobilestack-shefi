@@ -1,8 +1,8 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { StyleSheet, Text, View } from 'react-native'
-import { EarnEvents } from 'src/analytics/Events'
 import AppAnalytics from 'src/analytics/AppAnalytics'
+import { EarnEvents } from 'src/analytics/Events'
 import Touchable from 'src/components/Touchable'
 import CircledIcon from 'src/icons/CircledIcon'
 import EarnCoins from 'src/icons/EarnCoins'
@@ -29,8 +29,8 @@ export default function EarnEntrypoint() {
         <>
           <Text style={styles.title}>{t('earnFlow.entrypoint.title')}</Text>
           <View style={styles.row}>
-            <CircledIcon radius={32} backgroundColor={Colors.successLight}>
-              <EarnCoins size={20} color={Colors.successDark} />
+            <CircledIcon radius={32} backgroundColor={Colors.primaryDisabled}>
+              <EarnCoins size={20} color={Colors.black} />
             </CircledIcon>
             <View style={styles.subtitleContainer}>
               <Text style={styles.subtitle}>{t('earnFlow.entrypoint.subtitle')}</Text>
