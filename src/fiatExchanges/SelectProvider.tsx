@@ -570,7 +570,7 @@ const styles = StyleSheet.create({
   },
   container: {
     borderBottomWidth: 1,
-    borderBottomColor: colors.gray2,
+    borderBottomColor: colors.border,
   },
   expandableContainer: {
     paddingHorizontal: Spacing.Regular16,

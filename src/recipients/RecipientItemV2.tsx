@@ -57,7 +57,7 @@ function RecipientItem({ recipient, onSelectRecipient, loading, selected }: Prop
             recipient={recipient}
             backgroundColor={Colors.gray1}
             foregroundColor={Colors.black}
-            borderColor={Colors.gray2}
+            borderColor={Colors.border}
             DefaultIcon={() => <QuestionIcon />} // no need to honor color props here since the color we need match the defaults
           />
           {!!showAppIcon && (
