@@ -85,6 +85,7 @@ export default function TabBar({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
+    paddingHorizontal: Spacing.Regular16,
   },
   touchable: {
     flexShrink: 1,

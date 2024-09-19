@@ -8,10 +8,11 @@ import Animated, {
   useAnimatedStyle,
   useSharedValue,
 } from 'react-native-reanimated'
-import { AssetsEvents } from 'src/analytics/Events'
 import AppAnalytics from 'src/analytics/AppAnalytics'
+import { AssetsEvents } from 'src/analytics/Events'
 import Button, { BtnSizes, BtnTypes } from 'src/components/Button'
 import { AssetsTokenBalance } from 'src/components/TokenBalance'
+import ActionsCarousel from 'src/home/ActionsCarousel'
 import { navigate } from 'src/navigator/NavigationService'
 import { Screens } from 'src/navigator/Screens'
 import useScrollAwareHeader from 'src/navigator/ScrollAwareHeader'
@@ -28,7 +29,6 @@ import { Shadow, Spacing, getShadowStyle } from 'src/styles/styles'
 import AssetList from 'src/tokens/AssetList'
 import AssetTabBar from 'src/tokens/AssetTabBar'
 import { AssetTabType } from 'src/tokens/types'
-import ActionsCarousel from 'src/home/ActionsCarousel'
 
 type Props = NativeStackScreenProps<StackParamList, Screens.TabWallet>
 
@@ -205,7 +205,6 @@ const styles = StyleSheet.create({
   listHeaderContainer: {
     ...getShadowStyle(Shadow.SoftLight),
     paddingBottom: Spacing.Regular16,
-    paddingHorizontal: Spacing.Regular16,
     backgroundColor: Colors.white,
     position: 'absolute',
     width: '100%',
@@ -225,7 +224,9 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.Regular16,
   },
   balanceSection: {
+    paddingTop: Spacing.Smallest8,
     paddingBottom: Spacing.Regular16,
+    alignItems: 'center',
   },
 })
 
