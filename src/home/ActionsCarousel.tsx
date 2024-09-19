@@ -131,6 +131,8 @@ const styles = StyleSheet.create({
     padding: 0,
     backgroundColor: Colors.gray1,
     borderRadius: 10,
+    borderWidth: 1,
+    borderColor: Colors.border,
   },
   touchable: {
     alignItems: 'center',

@@ -203,7 +203,6 @@ export function AssetsTokenBalance({ showInfo }: { showInfo: boolean }) {
     <TouchableWithoutFeedback onPress={handleDismissInfo}>
       <View testID="AssetsTokenBalance">
         <View style={styles.row}>
-          <Text style={styles.walletTabTitle}>{t('bottomTabsNavigator.wallet.title')}</Text>
           {showInfo && (
             <TouchableOpacity
               onPress={toggleInfoVisible}
@@ -292,6 +291,7 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: 'center',
+    gap: Spacing.Smallest8,
   },
   exchangeTotalValue: {
     ...typeScale.labelSemiBoldSmall,
