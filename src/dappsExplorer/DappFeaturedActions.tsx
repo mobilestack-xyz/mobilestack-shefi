@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     marginTop: Spacing.Smallest8,
     marginBottom: Spacing.Thick24,
     borderWidth: 1,
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
     width: variables.width - Spacing.Thick24 * 2,
   },
   cardContainer: {

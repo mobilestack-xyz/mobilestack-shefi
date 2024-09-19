@@ -41,11 +41,11 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: Spacing.Regular16,
     borderWidth: 1,
-    borderColor: colors.gray2,
+    borderColor: colors.border,
     borderRadius: 100,
   },
   search: {
-    borderColor: colors.gray2,
+    borderColor: colors.border,
     borderRadius: 100,
   },
   input: {

@@ -339,7 +339,7 @@ const styles = StyleSheet.create({
   },
   collectInfoContainer: {
     padding: Spacing.Regular16,
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
     borderWidth: 1,
     borderRadius: 16,
     backgroundColor: Colors.gray1,

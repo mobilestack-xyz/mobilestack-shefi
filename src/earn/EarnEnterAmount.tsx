@@ -596,7 +596,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.gray1,
     borderWidth: 1,
     borderRadius: 16,
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
   },
   inputRow: {
     paddingHorizontal: Spacing.Regular16,
@@ -624,7 +624,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: Colors.white,
     borderWidth: 1,
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
     borderRadius: TOKEN_SELECTOR_BORDER_RADIUS,
     paddingHorizontal: Spacing.Smallest8,
     paddingVertical: Spacing.Tiny4,
@@ -643,7 +643,7 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     backgroundColor: Colors.gray2,
     borderWidth: 1,
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
     borderRadius: MAX_BORDER_RADIUS,
   },
   maxText: {
@@ -658,7 +658,7 @@ const styles = StyleSheet.create({
   txDetailsContainer: {
     marginVertical: Spacing.Regular16,
     padding: Spacing.Regular16,
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
     borderWidth: 1,
     borderRadius: 12,
     gap: Spacing.Smallest8,

@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   touchable: {
     padding: Spacing.Regular16,
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
     borderWidth: 1,
     borderRadius: 8,
   },

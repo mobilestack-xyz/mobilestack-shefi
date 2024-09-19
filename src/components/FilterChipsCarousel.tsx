@@ -77,7 +77,7 @@ function FilterChipsCarousel<T>({
               styles.filterChipBackground,
               chip.isSelected
                 ? { backgroundColor: Colors.black, borderColor: Colors.black }
-                : { backgroundColor: Colors.gray1, borderColor: Colors.gray2 },
+                : { backgroundColor: Colors.gray1, borderColor: Colors.border },
             ]}
           >
             <Touchable

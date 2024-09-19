@@ -286,7 +286,7 @@ const styles = StyleSheet.create({
     padding: Spacing.Regular16,
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
   },
   gasSubsidized: {
     ...typeScale.labelXSmall,

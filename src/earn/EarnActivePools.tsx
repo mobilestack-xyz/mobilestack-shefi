@@ -73,7 +73,7 @@ export default function EarnActivePools() {
 const styles = StyleSheet.create({
   card: {
     padding: Spacing.Regular16,
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
     borderWidth: 1,
     borderRadius: Spacing.Smallest8,
     marginBottom: Spacing.Thick24,
