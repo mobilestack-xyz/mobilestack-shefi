@@ -104,7 +104,9 @@ function AccountKeyPostSetup() {
         <Text style={styles.postSetupBody}>{t('postSetupBody')}</Text>
       </View>
       <View style={styles.postSetupCTA}>
-        <TextButton onPress={goToAccountKeyGuide}>{t('postSetupCTA')}</TextButton>
+        <TextButton onPress={goToAccountKeyGuide} style={{ color: colors.black }}>
+          {t('postSetupCTA')}
+        </TextButton>
       </View>
     </ScrollView>
   )
