@@ -103,6 +103,7 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: 'row',
+    width: '100%',
   },
   ctaRow: {
     paddingTop: Spacing.Smallest8,
