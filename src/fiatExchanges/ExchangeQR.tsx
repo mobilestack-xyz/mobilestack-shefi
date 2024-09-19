@@ -1,8 +1,8 @@
 import { RouteProp } from '@react-navigation/native'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import React, { useLayoutEffect, useRef } from 'react'
-import { FiatExchangeEvents } from 'src/analytics/Events'
 import AppAnalytics from 'src/analytics/AppAnalytics'
+import { FiatExchangeEvents } from 'src/analytics/Events'
 import BackButton from 'src/components/BackButton'
 import { ExternalExchangeProvider } from 'src/fiatExchanges/ExternalExchanges'
 import i18n from 'src/i18n'
@@ -14,6 +14,7 @@ import { StackParamList } from 'src/navigator/types'
 import QRCode from 'src/qrcode/QRCode'
 import { useDispatch } from 'src/redux/hooks'
 import { SVG, shareQRCode } from 'src/send/actions'
+import Colors from 'src/styles/colors'
 import { CICOFlow } from './utils'
 
 type Props = NativeStackScreenProps<StackParamList, Screens.ExchangeQR>
@@ -58,7 +59,11 @@ export default function ExchangeQR({ route, navigation }: Props) {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
-        <TopBarIconButton testID="shareButton" icon={<Share />} onPress={onPressShare} />
+        <TopBarIconButton
+          testID="shareButton"
+          icon={<Share color={Colors.black} />}
+          onPress={onPressShare}
+        />
       ),
     })
   }, [navigation])

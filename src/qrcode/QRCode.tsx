@@ -1,7 +1,7 @@
 import Clipboard from '@react-native-clipboard/clipboard'
 import React, { useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ViewStyle } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { nameSelector } from 'src/account/selectors'
 import Button from 'src/components/Button'
@@ -30,6 +30,7 @@ interface Props {
   onPressCopy?: () => void
   onPressInfo?: () => void
   onPressExchange?: (exchange: ExternalExchangeProvider) => void
+  qrStyle?: ViewStyle
 }
 
 export default function QRCodeDisplay(props: Props) {
@@ -73,7 +74,7 @@ export default function QRCodeDisplay(props: Props) {
 
   return (
     <View style={styles.container}>
-      <View testID="QRCode" style={styles.qrContainer}>
+      <View testID="QRCode" style={[styles.qrContainer, props.qrStyle]}>
         <StyledQRCode qrSvgRef={qrSvgRef} />
       </View>
 
@@ -155,18 +156,17 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: colors.white,
   },
   link: {
     ...typeScale.labelSemiBoldMedium,
     textDecorationLine: 'underline',
-    color: colors.primary,
+    color: colors.black,
     flexWrap: 'wrap',
   },
   qrContainer: {
-    marginTop: '55%',
+    marginTop: '35%',
     marginBottom: Spacing.Thick24,
   },
   name: {

@@ -36,7 +36,14 @@ export function QRCodePicker({ route, qrSvgRef, ...props }: QRCodeProps) {
   const onPressCopy = () => {
     AppAnalytics.track(QrScreenEvents.qr_screen_copy_address)
   }
-  return <QRCode {...props} qrSvgRef={qrSvgRef} onPressCopy={onPressCopy} />
+  return (
+    <QRCode
+      {...props}
+      qrSvgRef={qrSvgRef}
+      onPressCopy={onPressCopy}
+      qrStyle={{ marginTop: '55%' }}
+    />
+  )
 }
 
 type ScannerSceneProps = NativeStackScreenProps<QRTabParamList, Screens.QRScanner>
