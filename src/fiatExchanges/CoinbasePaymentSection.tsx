@@ -3,8 +3,8 @@ import React from 'react'
 import { generateOnRampURL } from '@coinbase/cbpay-js'
 import { useTranslation } from 'react-i18next'
 import { Image, StyleSheet, Text, View } from 'react-native'
-import { CoinbasePayEvents } from 'src/analytics/Events'
 import AppAnalytics from 'src/analytics/AppAnalytics'
+import { CoinbasePayEvents } from 'src/analytics/Events'
 import Touchable from 'src/components/Touchable'
 import { ProviderSelectionAnalyticsData } from 'src/fiatExchanges/types'
 import { FetchProvidersOutput } from 'src/fiatExchanges/utils'
@@ -82,7 +82,7 @@ export function CoinbasePaymentSection({
 const styles = StyleSheet.create({
   container: {
     borderBottomWidth: 1,
-    borderBottomColor: colors.gray2,
+    borderBottomColor: colors.border,
   },
   providerImage: {
     flex: 1,
