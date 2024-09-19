@@ -71,17 +71,6 @@ export default function QRCodeDisplay(props: Props) {
     return networks.join(', ')
   }
 
-  const description = () => (
-    <Text style={styles.description}>
-      <Trans
-        i18nKey={'fiatExchangeFlow.exchange.informational'}
-        tOptions={{ networks: getSupportedNetworks() }}
-      >
-        <Text style={styles.bold} />
-      </Trans>
-    </Text>
-  )
-
   return (
     <View style={styles.container}>
       <View testID="QRCode" style={styles.qrContainer}>
@@ -99,7 +88,7 @@ export default function QRCodeDisplay(props: Props) {
       <Button
         text={t('fiatExchangeFlow.exchange.copyAddress')}
         onPress={onPressCopy}
-        icon={<CopyIcon color={colors.white} />}
+        icon={<CopyIcon color={colors.black} />}
         iconMargin={12}
         iconPositionLeft={false}
         testID="copyButton"
@@ -130,7 +119,16 @@ export default function QRCodeDisplay(props: Props) {
         ) : (
           <InLineNotification
             variant={NotificationVariant.Info}
-            description={description()}
+            description={
+              <Text style={styles.description}>
+                <Trans
+                  i18nKey={'fiatExchangeFlow.exchange.informational'}
+                  tOptions={{ networks: getSupportedNetworks() }}
+                >
+                  <Text style={styles.bold} />
+                </Trans>
+              </Text>
+            }
             style={styles.link}
             testID="supportedNetworksNotification"
           />
@@ -152,6 +150,8 @@ const styles = StyleSheet.create({
   },
   description: {
     ...typeScale.bodyXSmall,
+    color: colors.black,
+    borderWidth: 1,
   },
   container: {
     flex: 1,
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   qrContainer: {
-    marginTop: '35%',
+    marginTop: '55%',
     marginBottom: Spacing.Thick24,
   },
   name: {
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     ...typeScale.bodyMedium,
     color: colors.gray5,
     marginHorizontal: variables.width / 5,
-    marginBottom: 8,
+    marginBottom: Spacing.Regular16,
     textAlign: 'center',
   },
   exchangeText: {
