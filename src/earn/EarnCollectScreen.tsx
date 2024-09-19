@@ -365,7 +365,7 @@ const styles = StyleSheet.create({
   separator: {
     marginBottom: Spacing.Regular16,
     borderBottomWidth: 1,
-    borderBottomColor: Colors.gray2,
+    borderBottomColor: Colors.border,
   },
   rateText: {
     ...typeScale.bodySmall,
