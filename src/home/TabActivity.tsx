@@ -1,5 +1,4 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
-import _ from 'lodash'
 import React, { useEffect } from 'react'
 import { RefreshControl, RefreshControlProps, SectionList } from 'react-native'
 import Animated, { useAnimatedScrollHandler, useSharedValue } from 'react-native-reanimated'
@@ -11,6 +10,7 @@ import { Screens } from 'src/navigator/Screens'
 import { StackParamList } from 'src/navigator/types'
 import { useDispatch, useSelector } from 'src/redux/hooks'
 import colors from 'src/styles/colors'
+import { Spacing } from 'src/styles/styles'
 import TransactionFeed from 'src/transactions/feed/TransactionFeed'
 
 const AnimatedSectionList = Animated.createAnimatedComponent(SectionList)
@@ -67,7 +67,7 @@ function TabActivity(_props: Props) {
         refreshControl={refresh}
         onRefresh={onRefresh}
         refreshing={isLoading}
-        contentContainerStyle={{ paddingBottom: insets.bottom }}
+        contentContainerStyle={{ paddingTop: Spacing.Regular16, paddingBottom: insets.bottom }}
         sections={sections}
         keyExtractor={keyExtractor}
         testID="WalletHome/SectionList"

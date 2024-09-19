@@ -1,8 +1,7 @@
-import BigNumber from 'bignumber.js'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { HomeEvents } from 'src/analytics/Events'
 import AppAnalytics from 'src/analytics/AppAnalytics'
+import { HomeEvents } from 'src/analytics/Events'
 import TokenDisplay from 'src/components/TokenDisplay'
 import Touchable from 'src/components/Touchable'
 import { jumpstartReclaimFlowStarted } from 'src/jumpstart/slice'
@@ -49,8 +48,6 @@ function TransferFeedItem({ transfer }: Props) {
     isJumpstart
   )
 
-  const colorStyle = new BigNumber(amount.value).isPositive() ? { color: colors.primary } : {}
-
   return (
     <Touchable testID="TransferFeedItem" onPress={openTransferDetails}>
       <View style={styles.container}>
@@ -77,7 +74,7 @@ function TransferFeedItem({ transfer }: Props) {
               localAmount={customLocalAmount ?? amount.localAmount}
               showExplicitPositiveSign={true}
               showLocalAmount={!showTokenAmount}
-              style={[styles.amount, colorStyle]}
+              style={styles.amount}
               testID={'TransferFeedItem/amount'}
             />
             <TokenDisplay
