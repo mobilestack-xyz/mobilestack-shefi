@@ -69,7 +69,7 @@ export default function PointsDiscoverCard() {
 const styles = StyleSheet.create({
   touchable: {
     overflow: 'hidden',
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
     borderWidth: 1,
     borderRadius: Spacing.Smallest8,
     marginBottom: Spacing.Thick24,
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.Smallest8,
     backgroundColor: Colors.gray1,
     borderWidth: 1,
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
     borderRadius: 100,
     pointerEvents: 'none',
   },

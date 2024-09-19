@@ -184,7 +184,7 @@ const SwapAmountInput = ({
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.gray1,
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
     borderWidth: 1,
   },
   tokenInfo: {
@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   bottomContainer: {
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
     borderTopWidth: 1,
   },
   inputContainer: {
@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
   maxButton: {
     backgroundColor: Colors.white,
     borderWidth: 1,
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
     borderRadius: Spacing.Tiny4,
     paddingVertical: Spacing.Tiny4,
     paddingHorizontal: Spacing.Tiny4,

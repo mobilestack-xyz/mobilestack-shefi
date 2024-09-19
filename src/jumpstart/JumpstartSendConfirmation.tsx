@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
   amountContainer: {
     backgroundColor: Colors.gray1,
     borderWidth: 1,
-    borderColor: Colors.gray2,
+    borderColor: Colors.border,
     borderRadius: 16,
     padding: Spacing.Regular16,
     gap: Spacing.Regular16,
