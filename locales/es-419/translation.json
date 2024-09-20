@@ -412,7 +412,7 @@
   "ether": "Ether",
   "tapToCopyCeloDollarsAddress": "`Toca para copiar tu dirección de cUSD de {{appName}}",
   "disclaimerFiat": "Los valores en {{currency}} son estimativos.",
-  "dollarsNotYetEnabledNote": "Los Celo Dollars aún no están disponibles en ningún proveedor. Para obtener Celo Dollars, compra CELO y cámbialos por Celo Dollars directamente en Valora, desde la pestaña CELO.",
+  "dollarsNotYetEnabledNote": "Los Celo Dollars aún no están disponibles en ningún proveedor. Para obtener Celo Dollars, compra CELO y cámbialos por Celo Dollars directamente en {{appName}}, desde la pestaña CELO.",
   "selectDigitalCurrency": "Selecciona un activo",
   "selectPaymentMethod": "Seleccionar método:",
   "payWithBank": "Cuenta bancaria",
@@ -450,7 +450,7 @@
     "body": "¡Como promoción, las tasas están temporalmente subvencionadas para celebrar el lanzamiento de {{appName}}!"
   },
   "pleaseSelectProvider": "Selecciona un proveedor de la lista a continuación. Estos enlaces te conectarán a servicios proporcionados por terceros.",
-  "otherFundingOptions": "Para conocer más formas de agregar y retirar fondos, consulta <0>¿Cómo puedo agregar fondos a mi cuenta de Valora?</0>",
+  "otherFundingOptions": "Para conocer más formas de agregar y retirar fondos, consulta <0>¿Cómo puedo agregar fondos a mi cuenta de {{appName}}?</0>",
   "youCanTransferIn": "Puedes utilizar un intercambio de terceros para enviar {{digitalAsset}} a tu cuenta {{appName}} . Para ello necesitarás la dirección de tu cuenta.",
   "youCanTransferOut": "Puedes retirar tus fondos enviándolos a un exchange de terceros que soporte {{digitalAsset}}.",
   "useBalanceWithMerchants": "Usa tu saldo para pagar en comercios asociados",

@@ -450,7 +450,7 @@
     "body": "Como uma promoção, as taxas são temporariamente subsidiadas para comemorar o lançamento do {{appName}}!"
   },
   "pleaseSelectProvider": "Por favor, selecione um fornecedor. Esses links são conectados a serviços de terceiros.",
-  "otherFundingOptions": "Para conhecer mais maneiras de adicionar e sacar fundos, visite <0>Como faço para adicionar fundos à minha conta da Valora?</0>",
+  "otherFundingOptions": "Para conhecer mais maneiras de adicionar e sacar fundos, visite <0>Como faço para adicionar fundos à minha conta da {{appName}}?</0>",
   "youCanTransferIn": "Você pode usar uma bolsa de terceiros para enviar {{digitalAsset}} para sua conta {{appName}} . Você precisará do seu endereço de conta para isso.",
   "youCanTransferOut": "Você pode sacar seus fundos enviando-os para uma troca de terceiros que suporta {{digitalAsset}}.",
   "useBalanceWithMerchants": "Use seu saldo com comerciantes apoiadores",
