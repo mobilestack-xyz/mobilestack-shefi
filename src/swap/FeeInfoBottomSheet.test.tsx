@@ -137,35 +137,6 @@ describe('FeeInfoBottomSheet', () => {
     )
   })
 
-  it('should display a message if the app fee is 0', () => {
-    const { getByText, getByTestId } = render(
-      <Provider
-        store={createMockStore({
-          tokens: {
-            tokenBalances: {
-              [mockCusdTokenId]: {
-                ...mockTokenBalances[mockCusdTokenId],
-                priceUsd: undefined,
-              },
-            },
-          },
-        })}
-      >
-        <FeeInfoBottomSheet
-          fetchingSwapQuote={false}
-          forwardedRef={{ current: null }}
-          appFee={{ ...mockAppFee, amount: new BigNumber(0) }}
-          crossChainFee={mockCrossChainFee}
-          networkFee={mockNetworkFee}
-        />
-      </Provider>
-    )
-    expect(getByText('swapScreen.transactionDetails.appFee')).toBeTruthy()
-    expect(getByTestId('SwapScreen/FeeInfoBottomSheet/AppFee')).toHaveTextContent(
-      'swapScreen.transactionDetails.swapFeeWaived'
-    )
-  })
-
   it('should display unknown values if the token info is missing', () => {
     const { getByTestId } = render(
       <Provider

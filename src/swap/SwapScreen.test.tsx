@@ -507,7 +507,7 @@ describe('SwapScreen', () => {
         NetworkId['celo-alfajores']
       }&sellToken=${mockCeloAddress}&sellIsNative=true&sellNetworkId=${
         NetworkId['celo-alfajores']
-      }&sellAmount=1234000000000000000&userAddress=${mockAccount.toLowerCase()}&slippagePercentage=0.3`
+      }&sellAmount=1234000000000000000&userAddress=${mockAccount.toLowerCase()}&slippagePercentage=0.3&enableAppFee=false`
     )
 
     expect(getByTestId('SwapTransactionDetails/ExchangeRate')).toHaveTextContent(
@@ -836,7 +836,7 @@ describe('SwapScreen', () => {
         NetworkId['celo-alfajores']
       }&sellToken=${mockCeloAddress}&sellIsNative=true&sellNetworkId=${
         NetworkId['celo-alfajores']
-      }&sellAmount=1234000000000000000&userAddress=${mockAccount.toLowerCase()}&slippagePercentage=0.3`
+      }&sellAmount=1234000000000000000&userAddress=${mockAccount.toLowerCase()}&slippagePercentage=0.3&enableAppFee=false`
     )
 
     expect(getByTestId('SwapTransactionDetails/ExchangeRate')).toHaveTextContent(
