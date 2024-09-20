@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Image, StyleSheet, Text, View } from 'react-native'
 import { background } from 'src/images/Images'
-import Logo from 'src/images/Logo'
+import LogoHeart from 'src/images/LogoHeart'
 import { nuxNavigationOptionsNoBackButton } from 'src/navigator/Headers'
 import { Screens } from 'src/navigator/Screens'
 import { goToNextOnboardingScreen, onboardingPropsSelector } from 'src/onboarding/steps'
@@ -31,7 +31,7 @@ function OnboardingSuccessScreen() {
   return (
     <View style={styles.container}>
       <Image source={background} style={styles.backgroundImage} />
-      <Logo color={colors.white} size={70} />
+      <LogoHeart color={colors.black} size={64} />
       <Text style={styles.text}>{t('success.message')}</Text>
     </View>
   )
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     ...typeScale.titleSmall,
     fontSize: 30,
     lineHeight: 36,
-    color: colors.white,
+    color: colors.black,
     marginTop: Spacing.Regular16,
     marginBottom: 30,
     shadowOffset: { width: 0, height: 1 },
