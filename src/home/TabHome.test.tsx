@@ -107,9 +107,9 @@ describe('TabHome', () => {
 
     expect(store.getActions().map((action) => action.type)).toEqual(
       expect.arrayContaining([
+        'points/pointsDataRefreshStarted',
+        'dapps/fetchDappsList',
         'HOME/VISIT_HOME',
-        'HOME/REFRESH_BALANCES',
-        'IDENTITY/IMPORT_CONTACTS',
       ])
     )
   })
