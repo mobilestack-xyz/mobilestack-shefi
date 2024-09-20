@@ -204,7 +204,7 @@ function useSwapQuote({
         [swapAmountParam]: swapAmountInWei.toFixed(0, BigNumber.ROUND_DOWN),
         userAddress: walletAddress ?? '',
         slippagePercentage,
-        ...(enableAppFee === true && { enableAppFee: enableAppFee.toString() }),
+        enableAppFee: enableAppFee === true ? 'true' : 'false',
       }
       const queryParams = new URLSearchParams({ ...params }).toString()
       const requestUrl = `${networkConfig.getSwapQuoteUrl}?${queryParams}`
