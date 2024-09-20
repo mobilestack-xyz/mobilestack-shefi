@@ -1,6 +1,6 @@
 # Contributing
 
-Valora is open source and we welcome open participation!
+Shefi is open source and we welcome open participation!
 
 ## Contributing PRs
 
@@ -24,7 +24,7 @@ ensure everyone has an idea of what you’re working on. If you’ve just
 started, we suggest creating a PR with “WIP” \(Work In Progress\) in
 the title and let us know when it’s ready to review in the comments.
 
-Valora is part of the Celo community and follows Celo's [Code of
+Shefi is part of the Celo community and follows Celo's [Code of
 Conduct](https://celo.org/code-of-conduct).
 
 ### Contributing _substantial_ changes
@@ -34,17 +34,16 @@ experience or an underlying implementation. For example, we would
 consider the following as examples of substantial changes:
 
 - Adding support for in-app swaps.
-- Changing how Valora calculates asset value in local fiat.
-- Changing Valora's branding (_e.g.,_ color palette).
-- Adding a way for Valora users to go through decentralized KYC.
+- Changing how Shefi calculates asset value in local fiat.
+- Changing Shefi's branding (_e.g.,_ color palette).
+- Adding a way for Shefiusers to go through decentralized KYC.
 - Removing screens from onboarding.
 
 If you're considering making what might be a substantial change, we
-strongly encourage you to reach out to the Valora engineering team
+strongly encourage you to reach out to the Mobile Stack engineering team
 first. We might have suggestions that guide the implementation and
-make it easier to implement a high-quality change to Valora with the
-least amount of work. `#valora-dev` on Valora's [Discord
-server](./README.md#community) is a great way to contact us.
+make it easier to implement a high-quality change to Mobile Stack with the
+least amount of work.
 
 ### Please make sure your PR
 
@@ -62,7 +61,7 @@ server](./README.md#community) is a great way to contact us.
 If you are submitting an issue, please double check that there doesn’t
 already exist an issue for the work you have in mind.
 
-- Has a clear detailed title such that it can’t be confused with other Valora issues.
+- Has a clear detailed title such that it can’t be confused with other Shefi issues.
 - Provides a comprehensive description of the current and expected
   behavior including, if relevant, links to external references and
   specific implementation guidelines.

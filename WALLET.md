@@ -1,12 +1,12 @@
-# Mobile (Valora)
+# Mobile (Shefi)
 
-- [Mobile (Valora)](#mobile-valora)
+- [Mobile (Shefi)](#mobile-shefi)
   - [Overview](#overview)
   - [Architecture](#architecture)
   - [Setup](#setup)
     - [Prerequisites](#prerequisites)
     - [Repository secrets](#repository-secrets)
-      - [For Valora employees only](#for-valora-employees-only)
+      - [For Mobile Stack employees only](#for-mobile-stack-employees-only)
       - [For External contributors](#for-external-contributors)
     - [iOS](#ios)
       - [Enroll in the Apple Developer Program](#enroll-in-the-apple-developer-program)
@@ -58,8 +58,8 @@
 
 ## Overview
 
-This package contains the code for the Valora mobile apps for Android and iOS.
-Valora is a self-sovereign wallet that enables anyone to onboard onto the Celo network, manage their currencies, and send payments.
+This package contains the code for the Shefi mobile apps for Android and iOS.
+Shefi is a self-sovereign wallet that enables anyone to onboard onto the Celo network, manage their currencies, and send payments.
 
 ## Architecture
 
@@ -95,9 +95,9 @@ brew install jq
 
 ### Repository secrets
 
-#### For Valora employees only
+#### For Mobile Stack employees only
 
-_This is only for Valora employees._
+_This is only for Mobile Stack employees._
 
 You will need to be added the team keyring on GCP so you can decrypt secrets in the repo. (Ask for an invite to `celo-mobile-alfajores`.)
 
@@ -121,7 +121,7 @@ External contributors don't need to decrypt repository secrets and can successfu
 
 In order to successfully set up your iOS development environment you will need to enroll in the [Apple Developer Program]. It is recommended that you enroll from an iOS device by downloading the Apple Developer App in the App Store. Using the app will result in the fastest processing of your enrollment.
 
-_If you are a Valora employee, please ask to be added to the Valora iOS development team._
+_If you are a Shefi employee, please ask to be added to the Shefi iOS development team._
 
 #### Install Xcode
 
@@ -341,7 +341,7 @@ you may require a fresh install of the app. Instead of rebuilding the app to get
 a fresh install, you can drag drop the generated app into the simulator after
 uninstalling the app. It is typically available in the following paths:
 
-- For iOS: `$HOME/Library/Developer/Xcode/DerivedData/MobileStack-<randomid>/Build/Products/Debug-iphonesimulator/Valora.app`
+- For iOS: `$HOME/Library/Developer/Xcode/DerivedData/MobileStack-<randomid>/Build/Products/Debug-iphonesimulator/Shefi.app`
 - For Android: `<path-to-wallet>/android/app/build/outputs/apk/alfajoresdev/debug/app-alfajoresdev-debug.apk`
 
 ## Debugging & App Profiling
@@ -395,7 +395,7 @@ The flame graph provides a view of each component and sub-component. The width i
 
 The [Android Profiler (standalone)][androidprofilerstandalone] is useful for viewing memory, CPU, and energy consumption. Run the profiler either from Android Studio or following the standalone instructions.
 
-Release mode is preferred for profiling as memory usage can be significantly higher in development builds. To create a local mainnet release build for profiling run the app with `yarn dev:android -e mainnet -r -t`; this supplies an env flag: `-e <environment>`, the release flag: `-r` and the profile flag: `-t`. After both the app and profiler are launched, in the profiler attach a new session by selecting your device and a debuggable process e.g. `co.clabs.valora`.
+Release mode is preferred for profiling as memory usage can be significantly higher in development builds. To create a local mainnet release build for profiling run the app with `yarn dev:android -e mainnet -r -t`; this supplies an env flag: `-e <environment>`, the release flag: `-r` and the profile flag: `-t`. After both the app and profiler are launched, in the profiler attach a new session by selecting your device and a debuggable process e.g. `xyz.mobilestack.shefi`.
 
 ## Testing
 
@@ -589,9 +589,8 @@ Websockets (`ws`) would have been a better choice but we cannot use unencrypted 
 
 ### Helpful hints for development
 
-We try to minimise the differences between running Valora in different modes and environments, however there are a few helpful things to know when developing the app.
+We try to minimise the differences between running Shefi in different modes and environments, however there are a few helpful things to know when developing the app.
 
-- Valora uses Crowdin Over-The-Air (OTA) content delivery to enable dynamic translation updates. The OTA translations are cached and used on subsequent app loads instead of the strings in the translation files of the app bundle. This means that during development, the app will not respond to manual changes of the translation.json files.
 - In development mode, analytics are disabled.
 
 ### Vulnerabilities found in dependencies
@@ -602,9 +601,7 @@ The script reports all vulnerabilities found; compare its output with [yarn-audi
 
 In case vulnerabilities are reported, check to see if they apply to production and if they have fixes available.
 
-If they apply to production, start a discussion in our [#on-call](https://valora-app.slack.com/archives/C02N3AR2P2S) channel.
-
-Then if they have fixes available, update the dependencies using [Renovate](https://github.com/valora-inc/wallet/issues/1716) or manually:
+Then if they have fixes available, update the dependencies using Renovate or manually:
 
 - If it's a direct dependency, update the dependency in `package.json`.
 - If it's a transitive dependency, you can manually remove the transitive dependency in `yarn.lock` and re-run `yarn install` to see if it can use the fixed version. If the sub dependency is pinned somewhere, you'll need to use a [yarn resolution](https://classic.yarnpkg.com/lang/en/docs/selective-version-resolutions/) in `package.json` to get the fixed version. Be careful with this as it can break other dependencies depending on a specific version.
@@ -648,23 +645,10 @@ react-native-webview@11.6.5 ✔
 $ bash scripts/key_placer.sh decrypt
 Processing encrypted files
 Encrypted files decrypted
-.
-~/src/github.com/valora-inc/wallet/branding/valora ~/src/github.com/valora-inc/wallet
-HEAD is now at ec0637b fix: update valora forum link (#9)
-~/src/github.com/valora-inc/wallet
-Using branding/valora
-building file list ... done
-
-sent 7697 bytes  received 20 bytes  15434.00 bytes/sec
-total size is 8003608  speedup is 1037.14
-building file list ... done
-
-sent 91 bytes  received 20 bytes  222.00 bytes/sec
-total size is 1465080  speedup is 13198.92
 ✨  Done in 12.77s.
 ```
 
-#### `Activity class {org.celo.mobile.staging/org.celo.mobile.MainActivity} does not exist.`
+#### `Activity class {xyz.mobilestack.mobile.staging/xyz.mobilestack.mobile.MainActivity} does not exist.`
 
 From time to time the app refuses to start showing this error:
 
@@ -696,7 +680,7 @@ rm -rf $HOME/Library/Developer/Xcode/DerivedData/*
 ```
 
 [celo platform]: https://celo.org
-[wallet]: https://github.com/valora-inc/wallet
+[wallet]: https://github.com/mobilestack-xyz/mobilestack-shefi
 [celo-blockchain]: https://github.com/celo-org/celo-blockchain
 [apple developer program]: https://developer.apple.com/programs/
 [detox]: https://github.com/wix/Detox
