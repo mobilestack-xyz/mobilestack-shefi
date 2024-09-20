@@ -161,7 +161,7 @@ exports[`SendConfirmation renders correctly 1`] = `
             <View
               style={
                 {
-                  "alignItems": "flex-start",
+                  "alignItems": "center",
                   "flexDirection": "row",
                 }
               }
@@ -670,7 +670,7 @@ exports[`SendConfirmation renders correctly 1`] = `
               [
                 {
                   "alignItems": "center",
-                  "backgroundColor": "#2E3338",
+                  "backgroundColor": "#F0CFF5",
                   "flexDirection": "row",
                   "flexGrow": 1,
                   "height": 48,
@@ -689,7 +689,7 @@ exports[`SendConfirmation renders correctly 1`] = `
               maxFontSizeMultiplier={1}
               style={
                 {
-                  "color": "#FFFFFF",
+                  "color": "#2E3338",
                   "fontFamily": "Inter-SemiBold",
                   "fontSize": 16,
                   "lineHeight": 24,

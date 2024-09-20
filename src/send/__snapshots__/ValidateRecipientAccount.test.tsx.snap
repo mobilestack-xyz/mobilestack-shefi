@@ -78,7 +78,7 @@ exports[`ValidateRecipientAccount renders correctly when full validation require
                   },
                   {
                     "backgroundColor": "#FFFFFF",
-                    "borderColor": "#E6E6E6",
+                    "borderColor": "#AAC6ED",
                     "borderRadius": 3,
                     "borderWidth": 1,
                     "flex": 0,
@@ -184,7 +184,7 @@ exports[`ValidateRecipientAccount renders correctly when full validation require
                 [
                   {
                     "alignItems": "center",
-                    "backgroundColor": "#2E3338",
+                    "backgroundColor": "#F0CFF5",
                     "flexDirection": "row",
                     "height": 48,
                     "justifyContent": "center",
@@ -202,7 +202,7 @@ exports[`ValidateRecipientAccount renders correctly when full validation require
                 maxFontSizeMultiplier={1}
                 style={
                   {
-                    "color": "#FFFFFF",
+                    "color": "#2E3338",
                     "fontFamily": "Inter-SemiBold",
                     "fontSize": 16,
                     "lineHeight": 24,
@@ -388,7 +388,7 @@ exports[`ValidateRecipientAccount renders correctly when partial validation requ
                       },
                       {
                         "backgroundColor": "#FFFFFF",
-                        "borderColor": "#E6E6E6",
+                        "borderColor": "#AAC6ED",
                         "borderRadius": 3,
                         "borderWidth": 1,
                         "flex": 0,
@@ -448,7 +448,7 @@ exports[`ValidateRecipientAccount renders correctly when partial validation requ
                       },
                       {
                         "backgroundColor": "#FFFFFF",
-                        "borderColor": "#E6E6E6",
+                        "borderColor": "#AAC6ED",
                         "borderRadius": 3,
                         "borderWidth": 1,
                         "flex": 0,
@@ -508,7 +508,7 @@ exports[`ValidateRecipientAccount renders correctly when partial validation requ
                       },
                       {
                         "backgroundColor": "#FFFFFF",
-                        "borderColor": "#E6E6E6",
+                        "borderColor": "#AAC6ED",
                         "borderRadius": 3,
                         "borderWidth": 1,
                         "flex": 0,
@@ -568,7 +568,7 @@ exports[`ValidateRecipientAccount renders correctly when partial validation requ
                       },
                       {
                         "backgroundColor": "#FFFFFF",
-                        "borderColor": "#E6E6E6",
+                        "borderColor": "#AAC6ED",
                         "borderRadius": 3,
                         "borderWidth": 1,
                         "flex": 0,
@@ -681,7 +681,7 @@ exports[`ValidateRecipientAccount renders correctly when partial validation requ
                 [
                   {
                     "alignItems": "center",
-                    "backgroundColor": "#2E3338",
+                    "backgroundColor": "#F0CFF5",
                     "flexDirection": "row",
                     "height": 48,
                     "justifyContent": "center",
@@ -699,7 +699,7 @@ exports[`ValidateRecipientAccount renders correctly when partial validation requ
                 maxFontSizeMultiplier={1}
                 style={
                   {
-                    "color": "#FFFFFF",
+                    "color": "#2E3338",
                     "fontFamily": "Inter-SemiBold",
                     "fontSize": 16,
                     "lineHeight": 24,

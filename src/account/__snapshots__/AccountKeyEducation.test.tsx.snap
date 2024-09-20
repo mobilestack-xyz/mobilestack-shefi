@@ -530,8 +530,8 @@ exports[`AccountKeyEducation renders correctly 1`] = `
               [
                 {
                   "alignItems": "center",
-                  "backgroundColor": "#F8F9F9",
-                  "borderColor": "#E6E6E6",
+                  "backgroundColor": "#F7F8EE",
+                  "borderColor": "#AAC6ED",
                   "borderRadius": 100,
                   "borderWidth": 1,
                   "flexDirection": "row",
