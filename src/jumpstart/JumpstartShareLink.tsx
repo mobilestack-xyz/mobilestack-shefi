@@ -19,7 +19,7 @@ import QRCodeIcon from 'src/icons/QRCode'
 import ShareIcon from 'src/icons/Share'
 import Times from 'src/icons/Times'
 import { noHeaderGestureDisabled } from 'src/navigator/Headers'
-import { navigateHome } from 'src/navigator/NavigationService'
+import { navigate } from 'src/navigator/NavigationService'
 import { Screens } from 'src/navigator/Screens'
 import { TopBarIconButton } from 'src/navigator/TopBarButton'
 import { StackParamList } from 'src/navigator/types'
@@ -115,7 +115,7 @@ function JumpstartShareLink({ route }: Props) {
 
   const handleNavigation = () => {
     if (shouldNavigate.current) {
-      navigateHome()
+      navigate(Screens.TabActivity)
     }
   }
 

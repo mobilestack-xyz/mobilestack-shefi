@@ -4,10 +4,10 @@ import * as matchers from 'redux-saga-test-plan/matchers'
 import { EffectProviders, StaticProvider, throwError } from 'redux-saga-test-plan/providers'
 import { call } from 'redux-saga/effects'
 import { showError } from 'src/alert/actions'
-import { CeloExchangeEvents, SendEvents } from 'src/analytics/Events'
 import AppAnalytics from 'src/analytics/AppAnalytics'
+import { CeloExchangeEvents, SendEvents } from 'src/analytics/Events'
 import { ErrorMessages } from 'src/app/ErrorMessages'
-import { navigateBack, navigateHome } from 'src/navigator/NavigationService'
+import { navigate, navigateBack } from 'src/navigator/NavigationService'
 import {
   Actions,
   SendPaymentAction,
@@ -119,7 +119,7 @@ describe(sendPaymentSaga, () => {
     {
       testSuffix: 'navigates home when not initiated from modal',
       fromModal: false,
-      navigateFn: navigateHome,
+      navigateFn: navigate,
     },
     {
       testSuffix: 'navigates back when initiated from modal',
