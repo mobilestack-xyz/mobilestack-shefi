@@ -282,16 +282,19 @@ const styles = StyleSheet.create({
   },
   bottomSheetPointAmountContainer: {
     flexDirection: 'row',
+    alignItems: 'center',
     gap: Spacing.Tiny4,
     alignSelf: 'flex-start',
-    backgroundColor: Colors.successLight,
+    backgroundColor: Colors.gray1,
     borderRadius: Spacing.XLarge48,
-    paddingVertical: Spacing.Smallest8,
-    paddingHorizontal: Spacing.Small12,
+    paddingVertical: Spacing.Tiny4,
+    paddingHorizontal: Spacing.Smallest8,
+    borderWidth: 1,
+    borderColor: Colors.border,
   },
   bottomSheetPointAmount: {
-    ...typeScale.labelSemiBoldXSmall,
-    color: Colors.successDark,
+    ...typeScale.labelSemiBoldSmall,
+    color: Colors.black,
   },
   bottomSheetPreviousPointsAmount: {
     ...typeScale.labelSemiBoldXSmall,
@@ -304,7 +307,7 @@ const styles = StyleSheet.create({
   },
   bottomSheetBody: {
     ...typeScale.bodySmall,
-    color: Colors.gray3,
+    color: Colors.black,
     marginBottom: Spacing.XLarge48,
   },
   balanceRow: {
@@ -314,7 +317,7 @@ const styles = StyleSheet.create({
     gap: Spacing.Tiny4,
   },
   infoCard: {
-    backgroundColor: Colors.secondary,
+    backgroundColor: Colors.primaryDisabled,
     padding: Spacing.Regular16,
     marginBottom: Spacing.Thick24,
     borderRadius: 12,
