@@ -314,7 +314,7 @@ const styles = StyleSheet.create({
     gap: Spacing.Tiny4,
   },
   infoCard: {
-    backgroundColor: Colors.successLight,
+    backgroundColor: Colors.secondary,
     padding: Spacing.Regular16,
     marginBottom: Spacing.Thick24,
     borderRadius: 12,
