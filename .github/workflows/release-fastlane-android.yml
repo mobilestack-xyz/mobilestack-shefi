@@ -38,7 +38,7 @@ jobs:
         uses: google-github-actions/get-secretmanager-secrets@v2
         with:
           secrets: |-
-            ANDROID_RELEASE_KEYSTORE:projects/1027349420744/secrets/ANDROID_RELEASE_KEYSTORE
+            ANDROID_MOBILESTACK_RELEASE_KEYSTORE:projects/1027349420744/secrets/ANDROID_MOBILESTACK_RELEASE_KEYSTORE
             MOBILESTACK_RELEASE_KEY_PASSWORD:projects/1027349420744/secrets/MOBILESTACK_RELEASE_KEY_PASSWORD
             MOBILESTACK_RELEASE_STORE_PASSWORD:projects/1027349420744/secrets/MOBILESTACK_RELEASE_STORE_PASSWORD
             SLACK_WEBHOOK_URL:projects/1027349420744/secrets/SLACK_WEBHOOK_URL
@@ -95,7 +95,7 @@ jobs:
       # TODO: use ram disk
       - name: Write secrets
         run: |
-          echo '${{ steps.google-secrets.outputs.ANDROID_RELEASE_KEYSTORE }}' | base64 -d > android/app/mobilestack-release-key.keystore
+          echo '${{ steps.google-secrets.outputs.ANDROID_MOBILESTACK_RELEASE_KEYSTORE }}' | base64 -d > android/app/mobilestack-release-key.keystore
           echo '${{ steps.google-secrets.outputs.GOOGLE_PLAY_SERVICE_ACCOUNT_KEY_JSON }}' > fastlane/google-play-service-account.json
       - env:
           MOBILESTACK_RELEASE_STORE_PASSWORD: ${{ steps.google-secrets.outputs.MOBILESTACK_RELEASE_STORE_PASSWORD }}
