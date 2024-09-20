@@ -96,11 +96,15 @@ function FeeInfoBottomSheet({
         <FeeAmount fee={networkFee} showMaxAmount isLoading={fetchingSwapQuote} />
       </View>
 
-      <View style={styles.divider} />
-      <View style={styles.row} testID="SwapScreen/FeeInfoBottomSheet/AppFee">
-        <Text style={styles.bodyText}>{t('swapScreen.transactionDetails.appFee')}</Text>
-        <FeeAmount fee={appFee} isLoading={fetchingSwapQuote} />
-      </View>
+      {appFee?.amount.gt(0) && (
+        <>
+          <View style={styles.divider} />
+          <View style={styles.row} testID="SwapScreen/FeeInfoBottomSheet/AppFee">
+            <Text style={styles.bodyText}>{t('swapScreen.transactionDetails.appFee')}</Text>
+            <FeeAmount fee={appFee} isLoading={fetchingSwapQuote} />
+          </View>
+        </>
+      )}
 
       {crossChainFee && (
         <>
