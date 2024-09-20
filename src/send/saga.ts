@@ -2,7 +2,8 @@ import { showErrorOrFallback } from 'src/alert/actions'
 import AppAnalytics from 'src/analytics/AppAnalytics'
 import { CeloExchangeEvents, SendEvents } from 'src/analytics/Events'
 import { ErrorMessages } from 'src/app/ErrorMessages'
-import { navigateBack, navigateHome } from 'src/navigator/NavigationService'
+import { navigate, navigateBack } from 'src/navigator/NavigationService'
+import { Screens } from 'src/navigator/Screens'
 import { handleQRCodeDefault, handleQRCodeSecureSend, shareSVGImage } from 'src/qrcode/utils'
 import {
   Actions,
@@ -130,7 +131,7 @@ export function* sendPaymentSaga({
     if (fromModal) {
       navigateBack()
     } else {
-      navigateHome()
+      navigate(Screens.TabActivity)
     }
 
     yield* put(sendPaymentSuccess({ amount, tokenId }))

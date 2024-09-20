@@ -19,7 +19,8 @@ import {
 } from 'src/earn/slice'
 import { DepositInfo, WithdrawInfo } from 'src/earn/types'
 import { isGasSubsidizedForNetwork } from 'src/earn/utils'
-import { navigateHome } from 'src/navigator/NavigationService'
+import { navigate } from 'src/navigator/NavigationService'
+import { Screens } from 'src/navigator/Screens'
 import { CANCELLED_PIN_INPUT } from 'src/pincode/authentication'
 import { vibrateError } from 'src/styles/hapticFeedback'
 import { getTokenInfo } from 'src/tokens/saga'
@@ -202,7 +203,7 @@ export function* depositSubmitSaga(action: PayloadAction<DepositInfo>) {
       txHashes
     )
 
-    navigateHome()
+    navigate(Screens.TabActivity)
     submitted = true
 
     // wait for the tx receipts, so that we can track them
@@ -369,7 +370,7 @@ export function* withdrawSubmitSaga(action: PayloadAction<WithdrawInfo>) {
       txHashes
     )
 
-    navigateHome()
+    navigate(Screens.TabActivity)
     submitted = true
 
     // wait for the tx receipts, so that we can track them
