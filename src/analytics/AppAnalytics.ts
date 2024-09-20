@@ -14,7 +14,6 @@ import { AnalyticsPropertiesList } from 'src/analytics/Properties'
 import { getCurrentUserTraits } from 'src/analytics/selectors'
 import {
   DEFAULT_TESTNET,
-  E2E_TEST_STATSIG_ID,
   FIREBASE_ENABLED,
   isE2EEnv,
   SEGMENT_API_KEY,
@@ -138,18 +137,7 @@ class AppAnalytics {
 
     try {
       const statsigUser = getDefaultStatsigUser()
-      // getAnonymousId causes the e2e tests to fail
-      let overrideStableID: string = E2E_TEST_STATSIG_ID
-      if (!isE2EEnv) {
-        if (!this.segmentClient) {
-          throw new Error('segmentClient is undefined, cannot get anonymous ID')
-        }
-        overrideStableID = this.segmentClient.userInfo.get().anonymousId
-      }
-      Logger.debug(TAG, 'Statsig stable ID', overrideStableID)
       await Statsig.initialize(STATSIG_API_KEY, statsigUser, {
-        // StableID should match Segment anonymousId
-        overrideStableID,
         environment: STATSIG_ENV,
         localMode: isE2EEnv,
       })
