@@ -39,7 +39,7 @@ exports[`NotificationBox renders correctly for with all notifications 1`] = `
               undefined,
               [
                 {
-                  "borderColor": "#E6E6E6",
+                  "borderColor": "#AAC6ED",
                   "borderWidth": 1,
                   "flex": 1,
                   "minHeight": 144,
@@ -130,7 +130,7 @@ exports[`NotificationBox renders correctly for with all notifications 1`] = `
                     style={
                       [
                         {
-                          "color": "#1AB775",
+                          "color": "#F0CFF5",
                           "fontFamily": "Inter-SemiBold",
                           "fontSize": 16,
                           "lineHeight": 24,
@@ -245,7 +245,7 @@ exports[`NotificationBox renders correctly for with all notifications 1`] = `
               undefined,
               [
                 {
-                  "borderColor": "#E6E6E6",
+                  "borderColor": "#AAC6ED",
                   "borderWidth": 1,
                   "flex": 1,
                   "minHeight": 144,
@@ -336,7 +336,7 @@ exports[`NotificationBox renders correctly for with all notifications 1`] = `
                     style={
                       [
                         {
-                          "color": "#1AB775",
+                          "color": "#F0CFF5",
                           "fontFamily": "Inter-SemiBold",
                           "fontSize": 16,
                           "lineHeight": 24,
@@ -394,7 +394,7 @@ exports[`NotificationBox renders correctly for with all notifications 1`] = `
                     style={
                       [
                         {
-                          "color": "#1AB775",
+                          "color": "#F0CFF5",
                           "fontFamily": "Inter-SemiBold",
                           "fontSize": 16,
                           "lineHeight": 24,
@@ -466,7 +466,7 @@ exports[`NotificationBox renders correctly for with all notifications 1`] = `
               undefined,
               [
                 {
-                  "borderColor": "#E6E6E6",
+                  "borderColor": "#AAC6ED",
                   "borderWidth": 1,
                   "flex": 1,
                   "minHeight": 144,
@@ -557,7 +557,7 @@ exports[`NotificationBox renders correctly for with all notifications 1`] = `
                     style={
                       [
                         {
-                          "color": "#1AB775",
+                          "color": "#F0CFF5",
                           "fontFamily": "Inter-SemiBold",
                           "fontSize": 16,
                           "lineHeight": 24,
@@ -615,7 +615,7 @@ exports[`NotificationBox renders correctly for with all notifications 1`] = `
                     style={
                       [
                         {
-                          "color": "#1AB775",
+                          "color": "#F0CFF5",
                           "fontFamily": "Inter-SemiBold",
                           "fontSize": 16,
                           "lineHeight": 24,
@@ -661,7 +661,7 @@ exports[`NotificationBox renders correctly for with all notifications 1`] = `
               undefined,
               [
                 {
-                  "borderColor": "#E6E6E6",
+                  "borderColor": "#AAC6ED",
                   "borderWidth": 1,
                   "flex": 1,
                   "minHeight": 144,
@@ -752,7 +752,7 @@ exports[`NotificationBox renders correctly for with all notifications 1`] = `
                     style={
                       [
                         {
-                          "color": "#1AB775",
+                          "color": "#F0CFF5",
                           "fontFamily": "Inter-SemiBold",
                           "fontSize": 16,
                           "lineHeight": 24,
@@ -810,7 +810,7 @@ exports[`NotificationBox renders correctly for with all notifications 1`] = `
                     style={
                       [
                         {
-                          "color": "#1AB775",
+                          "color": "#F0CFF5",
                           "fontFamily": "Inter-SemiBold",
                           "fontSize": 16,
                           "lineHeight": 24,

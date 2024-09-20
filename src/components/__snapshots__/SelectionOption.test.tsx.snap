@@ -41,10 +41,9 @@ exports[`renders selected correctly 1`] = `
       {
         "alignItems": "center",
         "borderBottomWidth": 1,
-        "borderColor": "#E6E6E6",
+        "borderColor": "#AAC6ED",
         "flexDirection": "row",
-        "marginLeft": 16,
-        "paddingVertical": 14,
+        "paddingVertical": 16,
       }
     }
   >
@@ -67,14 +66,14 @@ exports[`renders selected correctly 1`] = `
           cx="10"
           cy="10"
           r="9"
-          stroke="#1AB775"
+          stroke="#F0CFF5"
           strokeWidth={2}
           style={{}}
         />
         <circle
           cx="10"
           cy="10"
-          fill="#1AB775"
+          fill="#F0CFF5"
           r="6"
           style={{}}
         />
@@ -139,10 +138,9 @@ exports[`renders unselected correctly 1`] = `
       {
         "alignItems": "center",
         "borderBottomWidth": 1,
-        "borderColor": "#E6E6E6",
+        "borderColor": "#AAC6ED",
         "flexDirection": "row",
-        "marginLeft": 16,
-        "paddingVertical": 14,
+        "paddingVertical": 16,
       }
     }
   >

@@ -11,7 +11,7 @@ exports[`SettingsItemInput renders correctly 1`] = `
   <View
     style={
       {
-        "borderBottomColor": "#E6E6E6",
+        "borderBottomColor": "#AAC6ED",
         "borderBottomWidth": 1,
         "marginHorizontal": 16,
         "paddingVertical": 16,
@@ -119,7 +119,7 @@ exports[`SettingsItemSwitch renders correctly 1`] = `
   <View
     style={
       {
-        "borderBottomColor": "#E6E6E6",
+        "borderBottomColor": "#AAC6ED",
         "borderBottomWidth": 1,
         "marginHorizontal": 16,
         "paddingVertical": 16,
@@ -182,7 +182,7 @@ exports[`SettingsItemTextValue renders correctly 1`] = `
   <View
     style={
       {
-        "borderBottomColor": "#E6E6E6",
+        "borderBottomColor": "#AAC6ED",
         "borderBottomWidth": 1,
         "marginHorizontal": 16,
         "paddingVertical": 16,
@@ -277,7 +277,7 @@ exports[`SettingsItemTextValue renders correctly without value 1`] = `
   <View
     style={
       {
-        "borderBottomColor": "#E6E6E6",
+        "borderBottomColor": "#AAC6ED",
         "borderBottomWidth": 1,
         "marginHorizontal": 16,
         "paddingVertical": 16,

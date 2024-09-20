@@ -61,8 +61,8 @@ exports[`Button when type is SECONDARY renders 1`] = `
         [
           {
             "alignItems": "center",
-            "backgroundColor": "#F8F9F9",
-            "borderColor": "#E6E6E6",
+            "backgroundColor": "#F7F8EE",
+            "borderColor": "#AAC6ED",
             "borderRadius": 100,
             "borderWidth": 1,
             "flexDirection": "row",
@@ -159,7 +159,7 @@ exports[`Button when type is TERTIARY and text size is small renders 1`] = `
           {
             "alignItems": "center",
             "backgroundColor": "#FFFFFF",
-            "borderColor": "#E6E6E6",
+            "borderColor": "#AAC6ED",
             "borderRadius": 100,
             "borderWidth": 1,
             "flexDirection": "row",
@@ -255,7 +255,7 @@ exports[`Button when type not given defaults to primary 1`] = `
         [
           {
             "alignItems": "center",
-            "backgroundColor": "#2E3338",
+            "backgroundColor": "#F0CFF5",
             "flexDirection": "row",
             "height": 48,
             "justifyContent": "center",
@@ -272,7 +272,7 @@ exports[`Button when type not given defaults to primary 1`] = `
         maxFontSizeMultiplier={1}
         style={
           {
-            "color": "#FFFFFF",
+            "color": "#2E3338",
             "fontFamily": "Inter-SemiBold",
             "fontSize": 16,
             "lineHeight": 24,
