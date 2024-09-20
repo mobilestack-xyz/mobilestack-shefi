@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import { acceptTerms, chooseCreateAccount, chooseRestoreAccount } from 'src/account/actions'
 import { recoveringFromStoreWipeSelector } from 'src/account/selectors'
 import AppAnalytics from 'src/analytics/AppAnalytics'
@@ -29,7 +29,6 @@ export default function Welcome() {
   const dispatch = useDispatch()
   const acceptedTerms = useSelector((state) => state.account.acceptedTerms)
   const startOnboardingTime = useSelector((state) => state.account.startOnboardingTime)
-  const insets = useSafeAreaInsets()
   const recoveringFromStoreWipe = useSelector(recoveringFromStoreWipeSelector)
   const [termsCheckbox, toggleTermsCheckBox] = useState(acceptedTerms)
 
@@ -178,11 +177,6 @@ const styles = StyleSheet.create({
   },
   buttonView: {
     paddingHorizontal: Spacing.Thick24,
-  },
-  image: {
-    flex: 1,
-    justifyContent: 'center',
-    marginTop: Spacing.XLarge48,
   },
   msLogoContainer: {
     width: '100%',

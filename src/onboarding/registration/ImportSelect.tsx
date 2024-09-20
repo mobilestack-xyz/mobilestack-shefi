@@ -147,12 +147,6 @@ const styles = StyleSheet.create({
   screenTextContainer: {
     gap: Spacing.Regular16,
   },
-  topLine: {
-    alignItems: 'center',
-    flex: 1,
-    flexDirection: 'row',
-    gap: Spacing.Smallest8,
-  },
   touchable: {
     flexDirection: 'row',
     gap: Spacing.Smallest8,

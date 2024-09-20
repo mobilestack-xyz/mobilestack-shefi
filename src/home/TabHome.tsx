@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -6,12 +6,20 @@ import { DappFeaturedActions } from 'src/dappsExplorer/DappFeaturedActions'
 import DiscoverDappsCard from 'src/dappsExplorer/DiscoverDappsCard'
 import { EarnCardDiscover } from 'src/earn/EarnCard'
 import PointsDiscoverCard from 'src/points/PointsDiscoverCard'
-import { Colors } from 'src/styles/colors'
-import { typeScale } from 'src/styles/fonts'
 import { Spacing } from 'src/styles/styles'
 import networkConfig from 'src/web3/networkConfig'
+import { visitHome } from 'src/home/actions'
+import { useDispatch } from 'src/redux/hooks'
 
 function TabHome() {
+  const dispatch = useDispatch()
+
+  // Needed to trigger the granting of the "create-wallet" points
+  // in src/points/saga
+  useEffect(() => {
+    dispatch(visitHome())
+  }, [])
+
   return (
     <ScrollView testID="DiscoverScrollView" scrollEventThrottle={16}>
       <SafeAreaView testID="DAppsExplorerScreen" style={styles.safeAreaContainer} edges={[]}>
@@ -37,11 +45,6 @@ const styles = StyleSheet.create({
   contentContainer: {
     paddingHorizontal: Spacing.Thick24,
     paddingBottom: Spacing.Thick24,
-  },
-  title: {
-    ...typeScale.titleMedium,
-    color: Colors.black,
-    paddingVertical: Spacing.Thick24,
   },
 })
 
