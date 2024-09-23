@@ -12,7 +12,6 @@ import BackupPhraseContainer, {
 import { useAccountKey } from 'src/backup/utils'
 import Button from 'src/components/Button'
 import TextButton from 'src/components/TextButton'
-import Logo from 'src/images/Logo'
 import { navigate } from 'src/navigator/NavigationService'
 import { Screens } from 'src/navigator/Screens'
 import { StackParamList } from 'src/navigator/types'
@@ -73,7 +72,6 @@ function AccountKeyIntro({ onPrimaryPress }: AccountKeyStartProps) {
   const { t } = useTranslation()
   return (
     <ScrollView contentContainerStyle={styles.introContainer}>
-      <Logo size={32} />
       <Text style={styles.h1}>{t('introBackUpPhrase')}</Text>
       <Text style={styles.body}>{t('introCompleteQuiz')}</Text>
       <Button text={t('continue')} onPress={onPrimaryPress} testID="SetUpAccountKey" />

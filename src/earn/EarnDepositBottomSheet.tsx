@@ -16,7 +16,6 @@ import { depositStatusSelector } from 'src/earn/selectors'
 import { depositStart } from 'src/earn/slice'
 import { isGasSubsidizedForNetwork } from 'src/earn/utils'
 import InfoIcon from 'src/icons/InfoIcon'
-import Logo from 'src/images/Logo'
 import { navigate } from 'src/navigator/NavigationService'
 import { Screens } from 'src/navigator/Screens'
 import { EarnPosition } from 'src/positions/types'
@@ -204,9 +203,7 @@ function LabelledItem({ label, children }: { label: string; children: React.Reac
 function Logos({ providerUrl }: { providerUrl: string }) {
   return (
     <View style={styles.logoContainer}>
-      <View style={styles.logoBackground}>
-        <Logo size={LOGO_SIZE} />
-      </View>
+      <View style={styles.logoBackground}></View>
       <View style={[styles.logoBackground, { marginLeft: -4 }]}>
         <FastImage
           style={styles.providerImage}
