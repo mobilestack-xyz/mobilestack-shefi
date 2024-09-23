@@ -2,6 +2,7 @@ import { Action, Predicate } from '@redux-saga/types'
 import BigNumber from 'bignumber.js'
 import { SendOrigin } from 'src/analytics/types'
 import { ActionTypes as AppActionTypes, Actions as AppActions } from 'src/app/actions'
+import { FIREBASE_ENABLED } from 'src/config'
 import {
   Actions,
   BidaliPaymentRequestedAction,
@@ -162,8 +163,10 @@ export function* tagTxsWithProviderInfo({ transactions, networkId }: UpdateTrans
 }
 
 export function* importProviderLogos() {
-  const providerLogos: ProviderLogos = yield readOnceFromFirebase('providerLogos')
-  yield* put(setProviderLogos(providerLogos))
+  if (FIREBASE_ENABLED) {
+    const providerLogos: ProviderLogos = yield readOnceFromFirebase('providerLogos')
+    yield* put(setProviderLogos(providerLogos))
+  }
 }
 
 export function* watchBidaliPaymentRequests() {
