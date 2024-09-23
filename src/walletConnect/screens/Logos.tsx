@@ -1,7 +1,6 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native'
 import { SvgUri } from 'react-native-svg'
-import Logo from 'src/images/Logo'
 import { Colors } from 'src/styles/colors'
 import { typeScale } from 'src/styles/fonts'
 import { Shadow, Spacing, getShadowStyle } from 'src/styles/styles'
@@ -28,11 +27,6 @@ export default function Logos({ dappImageUrl, dappName }: Props) {
 
   return (
     <View style={styles.logoContainer}>
-      <View style={styles.logoShadow}>
-        <View style={styles.logoBackground}>
-          <Logo size={24} />
-        </View>
-      </View>
       <View style={styles.logoShadow}>
         {isDappImageSvg ? (
           <View style={styles.logoBackground}>
