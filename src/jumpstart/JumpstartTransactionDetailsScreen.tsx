@@ -19,7 +19,6 @@ import TokenDisplay from 'src/components/TokenDisplay'
 import TokenIcon, { IconSize } from 'src/components/TokenIcon'
 import CustomHeader from 'src/components/header/CustomHeader'
 import Checkmark from 'src/icons/Checkmark'
-import Logo from 'src/images/Logo'
 import { fetchClaimStatus } from 'src/jumpstart/fetchClaimStatus'
 import { jumpstartReclaimStatusSelector } from 'src/jumpstart/selectors'
 import { jumpstartReclaimErrorDismissed, jumpstartReclaimStarted } from 'src/jumpstart/slice'
@@ -29,7 +28,7 @@ import { StackParamList } from 'src/navigator/types'
 import { useDispatch, useSelector } from 'src/redux/hooks'
 import Colors from 'src/styles/colors'
 import { typeScale } from 'src/styles/fonts'
-import { Shadow, Spacing, getShadowStyle } from 'src/styles/styles'
+import { Spacing } from 'src/styles/styles'
 import variables from 'src/styles/variables'
 import { useTokenInfo } from 'src/tokens/hooks'
 import { feeCurrenciesSelector } from 'src/tokens/selectors'
@@ -282,11 +281,6 @@ function JumpstartTransactionDetailsScreen({ route }: Props) {
         />
       </TransactionDetails>
       <BottomSheet forwardedRef={bottomSheetRef} testId="ReclaimBottomSheet">
-        <View style={styles.logoShadow}>
-          <View style={styles.logoBackground}>
-            <Logo size={24} />
-          </View>
-        </View>
         <Text style={styles.header}>{t('confirmTransaction')}</Text>
         <Text style={styles.description}>{t('jumpstartReclaim.description')}</Text>
         <DataFieldWithCopy
@@ -395,18 +389,6 @@ const styles = StyleSheet.create({
   },
   errorNotification: {
     marginHorizontal: Spacing.Thick24,
-  },
-  logoShadow: {
-    ...getShadowStyle(Shadow.SoftLight),
-    borderRadius: 100,
-  },
-  logoBackground: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 40,
-    width: 40,
-    borderRadius: 100,
-    backgroundColor: Colors.white,
   },
 })
 
