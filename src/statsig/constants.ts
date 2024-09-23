@@ -184,9 +184,9 @@ export const DynamicConfigs = {
       showTransfers: ALL_NETWORKS,
       showWalletConnect: ALL_NETWORKS,
       showApprovalTxsInHomefeed: CELO_ETH_NETWORKS,
-      showNfts: CELO_ETH_NETWORKS,
-      showPositions: CELO_ETH_NETWORKS,
-      showShortcuts: CELO_ETH_NETWORKS,
+      showNfts: ALL_NETWORKS,
+      showPositions: ALL_NETWORKS,
+      showShortcuts: ALL_NETWORKS,
     },
   },
   [StatsigDynamicConfigs.DAPP_WEBVIEW_CONFIG]: {
