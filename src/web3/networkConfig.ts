@@ -299,11 +299,11 @@ const BASE_SET_REGISTRATION_PROPERTIES_AUTH = {
     Message: [{ name: 'content', type: 'string' }],
   },
   domain: {
-    name: 'SheFi',
+    name: APP_REGISTRY_NAME,
     version: '1',
   },
   message: {
-    content: 'shefi auth message',
+    content: `${APP_REGISTRY_NAME.toLowerCase()} auth message`,
   },
   primaryType: 'Message',
 } as const
