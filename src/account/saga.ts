@@ -175,6 +175,9 @@ export function* generateSignedMessage() {
 }
 
 export function* handleUpdateAccountRegistration() {
+  if (!FIREBASE_ENABLED) {
+    return
+  }
   const signedMessage = yield* call(retrieveSignedMessage)
   if (!signedMessage) {
     // ensures backwards compatibility - this should happen only for updating the

@@ -99,6 +99,11 @@ public class MainActivity extends ReactActivity {
       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
         cleverTapDefaultInstance.pushNotificationClickedEvent(intent.getExtras());
       }
+    } else {
+      super.onNewIntent(intent);
+      if (intent != null && intent.getAction() != null) {
+        setIntent(intent); // Update the intent to handle the deep link
+      }
     }
   }
 }
