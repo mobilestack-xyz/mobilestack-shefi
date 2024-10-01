@@ -7,9 +7,11 @@ import CancelButton from 'src/components/CancelButton'
 import CloseButton from 'src/components/CloseButton'
 import CurrencyDisplay from 'src/components/CurrencyDisplay'
 import LegacyTokenDisplay from 'src/components/LegacyTokenDisplay'
+import QrScanButton from 'src/components/QrScanButton'
 import SettingsGearButton from 'src/components/SettingsGearButton'
 import TokenDisplay from 'src/components/TokenDisplay'
 import i18n from 'src/i18n'
+import WelcomeLogo from 'src/images/WelcomeLogo'
 import DisconnectBanner from 'src/shared/DisconnectBanner'
 import colors from 'src/styles/colors'
 import { typeScale } from 'src/styles/fonts'
@@ -222,9 +224,15 @@ export function HeaderTitleWithSubtitle({
 
 export const tabHeader: NativeStackNavigationOptions = {
   ...emptyHeader,
-  headerLeft: () => (
-    <View style={[styles.topElementsContainer, { marginLeft: Spacing.Tiny4 }]}>
+  headerRight: () => (
+    <View style={[styles.topElementsContainer, { marginRight: Spacing.Small12 }]}>
+      <QrScanButton testID="WalletHome/QRScanButton" />
       <SettingsGearButton testID="WalletHome/SettingsGearButton" />
+    </View>
+  ),
+  headerLeft: () => (
+    <View style={[styles.topElementsContainer, { marginLeft: Spacing.Regular16 }]}>
+      <WelcomeLogo height={24} width={65} />
     </View>
   ),
 }
