@@ -38,6 +38,7 @@ export enum StatsigFeatureGates {
   SHOW_ONBOARDING_PHONE_VERIFICATION = 'show_onboarding_phone_verification',
   SHOW_MULTIPLE_EARN_POOLS = 'show_multiple_earn_pools',
   SHOW_APPLE_IN_CAB = 'show_apple_in_cab',
+  SHOW_IN_APP_DAPP_WEBVIEW = 'show_in_app_dapp_webview',
 }
 
 export enum StatsigExperiments {

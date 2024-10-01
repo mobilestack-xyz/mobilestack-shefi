@@ -1,6 +1,8 @@
 import { createSelector } from 'reselect'
 import { Dapp, DappCategory } from 'src/dapps/types'
 import { RootState } from 'src/redux/reducers'
+import { getFeatureGate } from 'src/statsig'
+import { StatsigFeatureGates } from 'src/statsig/types'
 
 export interface CategoryWithDapps extends DappCategory {
   dapps: Dapp[]
@@ -20,9 +22,10 @@ function getDappsById(dapps: Dapp[], dappIds: string[]) {
 export const dappsListApiUrlSelector = (state: RootState) => state.dapps.dappListApiUrl
 
 export const activeDappSelector = (state: RootState) =>
-  state.dapps.dappsWebViewEnabled ? state.dapps.activeDapp : null
+  dappsWebViewEnabledSelector() ? state.dapps.activeDapp : null
 
-export const dappsWebViewEnabledSelector = (state: RootState) => state.dapps.dappsWebViewEnabled
+export const dappsWebViewEnabledSelector = () =>
+  getFeatureGate(StatsigFeatureGates.SHOW_IN_APP_DAPP_WEBVIEW)
 
 export const dappsCategoriesSelector = (state: RootState) => state.dapps.dappsCategories
 
