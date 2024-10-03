@@ -5,7 +5,7 @@ export enum Colors {
   primaryDisabled = `${primary}80`, // 50% opacity
   secondary = '#AAC6ED',
   border = '#AAC6ED',
-  white = '#FFFFFF',
+  white = '#FEFFF8',
   ivory = '#F9F6F0',
   black = '#2E3338',
   gray5 = '#505050',
