@@ -253,8 +253,8 @@ export const DynamicConfigs = {
       minRequiredVersion: '0.0.0',
       links: {
         web: '',
-        tos: '',
-        privacy: '',
+        tos: 'https://www.shefi.org/terms-and-conditions',
+        privacy: 'https://www.shefi.org/privacy-policy',
         faq: '',
         funding: '',
         forum: '',

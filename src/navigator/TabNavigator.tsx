@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { StyleSheet } from 'react-native'
 import TabActivity from 'src/home/TabActivity'
 import TabHome from 'src/home/TabHome'
+import ClockIcon from 'src/icons/ClockIcon'
 import Home from 'src/icons/navigator/Home'
 import Wallet from 'src/icons/navigator/Wallet'
 import { tabHeader } from 'src/navigator/Headers'
@@ -15,7 +16,6 @@ import { typeScale } from 'src/styles/fonts'
 import { Spacing } from 'src/styles/styles'
 import variables from 'src/styles/variables'
 import TabWallet from 'src/tokens/TabWallet'
-import ClockIcon from 'src/icons/ClockIcon'
 
 const Tab = createBottomTabNavigator()
 
@@ -39,6 +39,7 @@ export default function TabNavigator({ route }: Props) {
         tabBarAllowFontScaling: false,
         tabBarStyle: {
           height: variables.height * 0.1,
+          backgroundColor: Colors.white,
         },
         ...(tabHeader as NativeStackHeaderProps),
       }}

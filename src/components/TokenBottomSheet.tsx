@@ -377,6 +377,7 @@ const styles = StyleSheet.create({
   // so avoid adding padding/margin to it, or min/max height
   container: {
     flex: 1,
+    backgroundColor: colors.white,
   },
   searchInput: {
     marginTop: Spacing.Regular16,
