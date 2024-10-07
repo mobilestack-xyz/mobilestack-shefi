@@ -11,8 +11,8 @@ import {
   View,
 } from 'react-native'
 import Animated from 'react-native-reanimated'
-import { AssetsEvents } from 'src/analytics/Events'
 import AppAnalytics from 'src/analytics/AppAnalytics'
+import { AssetsEvents } from 'src/analytics/Events'
 import { hideWalletBalancesSelector } from 'src/app/selectors'
 import Touchable from 'src/components/Touchable'
 import CircledIcon from 'src/icons/CircledIcon'
@@ -247,16 +247,17 @@ export default function AssetList({
     switch (activeTab) {
       case AssetTabType.Tokens:
       case AssetTabType.Positions:
-        return null
+        return (
+          <View testID="Assets/NoPositions" style={styles.noNftsTextContainer}>
+            <Text style={styles.noNftsText}>{t('assets.noDappPositions')}</Text>
+          </View>
+        )
       case AssetTabType.Collectibles:
         if (nftsError) return <NftsLoadError testID="Assets/NftsLoadError" />
         else if (nftsLoading) return null
         else
           return (
-            <View
-              testID="Assets/NoNfts"
-              style={[{ marginTop: listHeaderHeight }, styles.noNftsTextContainer]}
-            >
+            <View testID="Assets/NoNfts" style={styles.noNftsTextContainer}>
               <Text style={styles.noNftsText}>{t('nftGallery.noNfts')}</Text>
             </View>
           )
@@ -360,6 +361,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   noNftsTextContainer: {
+    paddingTop: Spacing.XLarge48,
     paddingHorizontal: Spacing.Thick24,
   },
   importTokenContainer: {

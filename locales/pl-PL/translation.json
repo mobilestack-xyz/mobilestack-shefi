@@ -2075,6 +2075,7 @@
       "collectibles": "Kolekcje",
       "dappPositions": "Pozycje dapp"
     },
+    "noDappPositions": "Twoje pozycje w Dapp będą wyświetlane tutaj, gdy będziesz mieć je w swoim portfolio",
     "importToken": "Import",
     "importTokens": "Importuj tokeny"
   },

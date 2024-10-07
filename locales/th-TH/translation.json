@@ -2069,6 +2069,7 @@
       "collectibles": "ของสะสม",
       "dappPositions": "สถานะ Dapp"
     },
+    "noDappPositions": "ตำแหน่ง DApp ของคุณจะแสดงที่นี่เมื่อคุณมีตำแหน่งหนึ่งในพอร์ตโฟลิโอของคุณ",
     "importToken": "นำเข้า",
     "importTokens": "นำเข้าโทเค็น"
   },

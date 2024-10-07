@@ -2069,6 +2069,7 @@
       "collectibles": "藏品",
       "dappPositions": "Dapp 持仓"
     },
+    "noDappPositions": "一旦您的投资组合中有一个 Dapp 头寸，您的 Dapp 头寸就会显示在此处",
     "importToken": "导入",
     "importTokens": "导入令牌"
   },

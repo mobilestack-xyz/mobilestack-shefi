@@ -2075,6 +2075,7 @@
       "collectibles": "Коллекции",
       "dappPositions": "DeFi"
     },
+    "noDappPositions": "Ваши позиции в Dapp будут отображаться здесь, как только они появятся в вашем портфолио.",
     "importToken": "Импорт",
     "importTokens": "Импортировать токены"
   },
