@@ -2071,6 +2071,7 @@
       "collectibles": "Collectibles",
       "dappPositions": "Dapp Positions"
     },
+    "noDappPositions": "Your Dapp Positions will display here once you have one in your wallet",
     "importToken": "Import",
     "importTokens": "Import Tokens"
   },

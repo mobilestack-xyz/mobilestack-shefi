@@ -2071,6 +2071,7 @@
       "collectibles": "Collections",
       "dappPositions": "DeFi"
     },
+    "noDappPositions": "Vos postes Dapp s'afficheront ici une fois que vous en aurez une dans votre portefeuille",
     "importToken": "Importer",
     "importTokens": "Importer des jetons"
   },

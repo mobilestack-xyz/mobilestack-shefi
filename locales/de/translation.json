@@ -2071,6 +2071,7 @@
       "collectibles": "Sammlerstücke",
       "dappPositions": "DeFi"
     },
+    "noDappPositions": "Ihre Dapp-Positionen werden hier angezeigt, sobald Sie eine in Ihrer Brieftasche haben",
     "importToken": "Importieren",
     "importTokens": "Token importieren"
   },

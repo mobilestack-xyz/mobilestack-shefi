@@ -2071,6 +2071,7 @@
       "collectibles": "Koleksiyonlar",
       "dappPositions": "DeFi"
     },
+    "noDappPositions": "Portföyünüzde Dapp pozisyonlarınız bulunduğunda Dapp pozisyonlarınız burada görüntülenecektir",
     "importToken": "İçe Aktar",
     "importTokens": "Tokenleri İçe Aktar"
   },

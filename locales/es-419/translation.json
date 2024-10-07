@@ -2071,6 +2071,7 @@
       "collectibles": "Coleccionables",
       "dappPositions": "DeFi"
     },
+    "noDappPositions": "Sus posiciones en Dapp se mostrarán aquí una vez que tenga una en su cartera.",
     "importToken": "Importar",
     "importTokens": "Importar tokens"
   },

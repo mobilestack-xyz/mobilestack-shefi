@@ -2071,6 +2071,7 @@
       "collectibles": "Collezioni",
       "dappPositions": "Asset DeFi"
     },
+    "noDappPositions": "Le tue posizioni Dapp verranno visualizzate qui una volta che ne avrai una nel tuo portafoglio",
     "importToken": "Importa",
     "importTokens": "Importa token"
   },

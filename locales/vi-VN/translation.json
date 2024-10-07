@@ -2069,6 +2069,7 @@
       "collectibles": "Bộ sưu tập",
       "dappPositions": "DeFi"
     },
+    "noDappPositions": "Vị trí Dapp của bạn sẽ hiển thị ở đây sau khi bạn có một vị trí trong danh mục đầu tư của mình",
     "importToken": "Nhập",
     "importTokens": "Nhập token"
   },
