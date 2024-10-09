@@ -390,10 +390,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   noResultsContainer: {
-    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: Spacing.Regular16,
+    margin: Spacing.Regular16,
   },
   tokenBalanceItemContainer: {
     marginHorizontal: Spacing.Thick24,
