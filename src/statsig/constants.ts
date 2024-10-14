@@ -266,6 +266,12 @@ export const DynamicConfigs = {
       },
     },
   },
+  [StatsigDynamicConfigs.COINBASE_PAY_APP_ID]: {
+    configName: StatsigDynamicConfigs.COINBASE_PAY_APP_ID,
+    defaultValues: {
+      appId: '',
+    },
+  },
 } satisfies {
   [key in StatsigDynamicConfigs | StatsigMultiNetworkDynamicConfig]: {
     configName: key

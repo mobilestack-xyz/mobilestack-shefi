@@ -35,7 +35,6 @@ import {
   selectFiatConnectQuoteLoadingSelector,
 } from 'src/fiatconnect/selectors'
 import { fetchFiatConnectQuotes } from 'src/fiatconnect/slice'
-import { readOnceFromFirebase } from 'src/firebase/firebase'
 import i18n from 'src/i18n'
 import {
   getDefaultLocalCurrencyCode,
@@ -111,8 +110,9 @@ export default function SelectProviderScreen({ route, navigation }: Props) {
 
   const { t } = useTranslation()
   const coinbasePayEnabled = useSelector(coinbasePayEnabledSelector)
-  const appIdResponse = useAsync(async () => readOnceFromFirebase('coinbasePay/appId'), [])
-  const appId = appIdResponse.result
+  const appId = getDynamicConfigParams(
+    DynamicConfigs[StatsigDynamicConfigs.COINBASE_PAY_APP_ID]
+  ).appId
 
   useEffect(() => {
     if (FETCH_FIATCONNECT_QUOTES) {
@@ -201,10 +201,10 @@ export default function SelectProviderScreen({ route, navigation }: Props) {
   )
   const coinbasePayVisible =
     flow === CICOFlow.CashIn &&
-    coinbaseProvider &&
+    !!coinbaseProvider &&
     !coinbaseProvider.restricted &&
     coinbasePayEnabled &&
-    appId
+    !!appId
 
   const anyProviders =
     normalizedQuotes.length ||
