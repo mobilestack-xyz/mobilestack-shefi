@@ -8,6 +8,7 @@ export enum StatsigDynamicConfigs {
   NFT_CELEBRATION_CONFIG = 'nft_celebration_config',
   EARN_STABLECOIN_CONFIG = 'earn_stablecoin_config',
   APP_CONFIG = 'app_config',
+  COINBASE_PAY_APP_ID = 'coinbase_pay_app_id',
 }
 
 // Separating into different enum from StatsigDynamicConfigs to allow for more strict typing
