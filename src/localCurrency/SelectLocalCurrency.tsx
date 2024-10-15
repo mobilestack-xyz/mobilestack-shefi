@@ -48,7 +48,7 @@ function SelectLocalCurrency() {
 
   return (
     <ScrollView style={styles.container} testID="SelectLocalCurrencyScrollView">
-      <SafeAreaView edges={['bottom']}>
+      <SafeAreaView edges={['bottom']} style={{ paddingHorizontal: 16 }}>
         <Text style={styles.title} testID={'ChooseCurrencyTitle'}>
           {t('selectCurrency')}
         </Text>
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   title: {
     ...typeScale.titleMedium,
-    margin: 16,
+    marginVertical: 16,
   },
 })
 
