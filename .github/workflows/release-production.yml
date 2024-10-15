@@ -5,6 +5,9 @@ name: Release - Production
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - kathy/test-ci
 
 jobs:
   # ios:
@@ -18,7 +21,7 @@ jobs:
   android:
     uses: ./.github/workflows/release-fastlane-android.yml
     with:
-      branch: ${{ github.ref_name }}
+      branch: kathy/test-ci
       lanes: '["mainnet"]'
     secrets:
       gcp-service-account-key: ${{ secrets.GCP_MAINNET_RELEASE_AUTOMATION_SERVICE_ACCOUNT_KEY }}
