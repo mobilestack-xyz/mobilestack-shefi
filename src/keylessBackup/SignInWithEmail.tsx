@@ -1,7 +1,7 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import React, { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 import { useAuth0 } from 'react-native-auth0'
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import AppAnalytics from 'src/analytics/AppAnalytics'
@@ -34,6 +34,8 @@ import { typeScale } from 'src/styles/fonts'
 import { Spacing } from 'src/styles/styles'
 import variables from 'src/styles/variables'
 import Logger from 'src/utils/Logger'
+import { walletAddressSelector } from 'src/web3/selectors'
+import colors from 'src/styles/colors'
 
 const TAG = 'keylessBackup/SignInWithEmail'
 
@@ -48,6 +50,7 @@ function SignInWithEmailBottomSheet({
 }) {
   const { t } = useTranslation()
   const onboardingProps = useSelector(onboardingPropsSelector)
+
   const onPressContinue = () => {
     AppAnalytics.track(KeylessBackupEvents.cab_setup_recovery_phrase)
     bottomSheetRef.current?.close()
@@ -111,6 +114,7 @@ function SignInWithEmail({ route }: Props) {
   const insetsStyle = {
     paddingBottom: Math.max(0, 40 - bottom),
   }
+  const address = useSelector(walletAddressSelector)
 
   const isSetup = keylessBackupFlow === KeylessBackupFlow.Setup
   const isSetupInOnboarding =
@@ -173,6 +177,15 @@ function SignInWithEmail({ route }: Props) {
     }
   }
 
+  if (!address) {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.activityIndicatorContainer}>
+          <ActivityIndicator testID="loadingTransferStatus" size="large" color={colors.primary} />
+        </View>
+      </SafeAreaView>
+    )
+  }
   return (
     <SafeAreaView style={styles.container}>
       <CustomHeader
@@ -270,6 +283,12 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
     height: '100%',
+  },
+  activityIndicatorContainer: {
+    paddingVertical: variables.contentPadding,
+    flex: 1,
+    alignContent: 'center',
+    justifyContent: 'center',
   },
   scrollContainer: {
     padding: Spacing.Thick24,
