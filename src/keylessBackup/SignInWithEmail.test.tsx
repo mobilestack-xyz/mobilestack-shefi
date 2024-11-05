@@ -34,8 +34,8 @@ const renderComponent = (
   keylessBackupFlow: KeylessBackupFlow = KeylessBackupFlow.Setup,
   origin: KeylessBackupOrigin = KeylessBackupOrigin.Settings,
   storeOverride?: ReturnType<typeof createMockStore>
-) => {
-  return render(
+) =>
+  render(
     <Provider store={storeOverride ?? store}>
       <MockedNavigator
         component={SignInWithEmail}
@@ -47,7 +47,7 @@ const renderComponent = (
       />
     </Provider>
   )
-}
+
 describe('SignInWithEmail', () => {
   let logWarnSpy: jest.SpyInstance
   let logDebugSpy: jest.SpyInstance

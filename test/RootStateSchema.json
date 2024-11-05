@@ -248,6 +248,7 @@
                                 "fiatConnectKycStatusScreen.tryAgainFailed",
                                 "fiatDetailsScreen.addFiatAccountFailed",
                                 "fiatDetailsScreen.addFiatAccountResourceExist",
+                                "firebaseDisabled",
                                 "firebaseFailed",
                                 "hooksPreview.invalidApiUrl",
                                 "importBackupFailed",
