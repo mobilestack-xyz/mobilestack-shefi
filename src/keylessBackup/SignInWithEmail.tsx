@@ -177,7 +177,7 @@ function SignInWithEmail({ route }: Props) {
     }
   }
 
-  if (!address) {
+  if (!address && isSetup) {
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.activityIndicatorContainer}>
