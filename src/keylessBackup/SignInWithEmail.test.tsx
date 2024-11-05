@@ -32,10 +32,11 @@ jest.mock('src/statsig')
 const store = createMockStore()
 const renderComponent = (
   keylessBackupFlow: KeylessBackupFlow = KeylessBackupFlow.Setup,
-  origin: KeylessBackupOrigin = KeylessBackupOrigin.Settings
-) =>
-  render(
-    <Provider store={store}>
+  origin: KeylessBackupOrigin = KeylessBackupOrigin.Settings,
+  storeOverride?: ReturnType<typeof createMockStore>
+) => {
+  return render(
+    <Provider store={storeOverride ?? store}>
       <MockedNavigator
         component={SignInWithEmail}
         params={{
@@ -46,7 +47,7 @@ const renderComponent = (
       />
     </Provider>
   )
-
+}
 describe('SignInWithEmail', () => {
   let logWarnSpy: jest.SpyInstance
   let logDebugSpy: jest.SpyInstance
@@ -65,6 +66,21 @@ describe('SignInWithEmail', () => {
       )
     logWarnSpy = jest.spyOn(Logger, 'warn')
     logDebugSpy = jest.spyOn(Logger, 'debug')
+  })
+
+  it('spins when no address and coming from setup flow', () => {
+    const storeNoAddress = createMockStore({ web3: { account: undefined } })
+    const { getByTestId } = renderComponent(
+      KeylessBackupFlow.Setup,
+      KeylessBackupOrigin.Onboarding,
+      storeNoAddress
+    )
+    expect(getByTestId('SignInWithEmail/Spinner')).toBeTruthy()
+  })
+
+  it('does not spin  when no address and coming from recovery flow', () => {
+    const { queryByTestId } = renderComponent(KeylessBackupFlow.Setup)
+    expect(queryByTestId('SignInWithEmail/Spinner')).toBeFalsy()
   })
 
   it.each([

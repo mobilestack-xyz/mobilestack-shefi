@@ -180,7 +180,7 @@ function SignInWithEmail({ route }: Props) {
   if (!address && isSetup) {
     return (
       <SafeAreaView style={styles.container}>
-        <View style={styles.activityIndicatorContainer}>
+        <View style={styles.activityIndicatorContainer} testID="SignInWithEmail/Spinner">
           <ActivityIndicator testID="loadingTransferStatus" size="large" color={colors.primary} />
         </View>
       </SafeAreaView>
