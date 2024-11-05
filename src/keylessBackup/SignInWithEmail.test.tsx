@@ -78,6 +78,16 @@ describe('SignInWithEmail', () => {
     expect(getByTestId('SignInWithEmail/Spinner')).toBeTruthy()
   })
 
+  it('does not spin when no address and coming from setup flow in settings', () => {
+    const storeNoAddress = createMockStore({ web3: { account: undefined } })
+    const { queryByTestId } = renderComponent(
+      KeylessBackupFlow.Setup,
+      KeylessBackupOrigin.Settings,
+      storeNoAddress
+    )
+    expect(queryByTestId('SignInWithEmail/Spinner')).toBeFalsy()
+  })
+
   it('does not spin  when no address and coming from recovery flow', () => {
     const { queryByTestId } = renderComponent(KeylessBackupFlow.Setup)
     expect(queryByTestId('SignInWithEmail/Spinner')).toBeFalsy()
